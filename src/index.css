@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Fjalla+One&family=Love+Light&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400&family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Anaheim&family=Fjalla+One&family=Love+Light&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400&family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Anaheim&family=Fjalla+One&family=Love+Light&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400&family=Noto+Sans+Georgian:wght@100;200;300;400;500;600;700;800;900&family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Anaheim&family=Fjalla+One&family=Love+Light&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400&family=Noto+Sans+Georgian:wght@100;200;300;400;500;600;700;800;900&family=Roboto&family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Anaheim&family=Fjalla+One&family=Jost&family=Love+Light&family=Roboto&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+@media only screen and (max-width: 500px) {
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+
+@keyframes showTopText {
+
+  40%,
+  60% {
+    transform: translate3d(0, 90%, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes showBottomText {
+  0% {
+    transform: translate3d(0, -100%, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+
+
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+
+}
+
+.section {
+  scroll-snap-align: start;
+}
+
+
+
+
+.m_scroll_arrows {
+  display: block;
+  width: 5px;
+  height: 5px;
+  -ms-transform: rotate(45deg);
+  /* IE 9 */
+  -webkit-transform: rotate(45deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+  margin: 0 0 3px 4px;
+
+  width: 16px;
+  height: 16px;
+}
+
+
+.unu {
+  margin-top: 1px;
+}
+
+.unu,
+.doi,
+.trei {
+  -webkit-animation: mouse-scroll 1s infinite;
+  -moz-animation: mouse-scroll 1s infinite;
+  animation: mouse-scroll 1s infinite;
+
+}
+
+.unu {
+  -webkit-animation-delay: .1s;
+  -moz-animation-delay: .1s;
+  -webkit-animation-direction: alternate;
+
+  animation-direction: alternate;
+  animation-delay: alternate;
+}
+
+.doi {
+  -webkit-animation-delay: .2s;
+  -moz-animation-delay: .2s;
+  -webkit-animation-direction: alternate;
+
+  animation-delay: .2s;
+  animation-direction: alternate;
+
+  margin-top: -6px;
+}
+
+.trei {
+  -webkit-animation-delay: .3s;
+  -moz-animation-delay: .3s;
+  -webkit-animation-direction: alternate;
+
+  animation-delay: .3s;
+  animation-direction: alternate;
+
+
+  margin-top: -6px;
+}
+
+.mouse {
+  height: 42px;
+  width: 24px;
+  border-radius: 14px;
+  transform: none;
+
+  top: 170px;
+}
+
+.wheel {
+  height: 5px;
+  width: 2px;
+  display: block;
+  margin: 5px auto;
+  background: white;
+  position: relative;
+
+  height: 4px;
+  width: 4px;
+  border: 2px solid #fff;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+
+.wheel {
+  -webkit-animation: mouse-wheel 0.6s linear infinite;
+  -moz-animation: mouse-wheel 0.6s linear infinite;
+  animation: mouse-wheel 0.6s linear infinite;
+}
+
+@-webkit-keyframes mouse-wheel {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(6px);
+    -ms-transform: translateY(6px);
+    transform: translateY(6px);
+  }
+}
+
+@-moz-keyframes mouse-wheel {
+  0% {
+    top: 1px;
+  }
+
+  25% {
+    top: 2px;
+  }
+
+  50% {
+    top: 3px;
+  }
+
+  75% {
+    top: 2px;
+  }
+
+  100% {
+    top: 1px;
+  }
+}
+
+@-o-keyframes mouse-wheel {
+
+  0% {
+    top: 1px;
+  }
+
+  25% {
+    top: 2px;
+  }
+
+  50% {
+    top: 3px;
+  }
+
+  75% {
+    top: 2px;
+  }
+
+  100% {
+    top: 1px;
+  }
+}
+
+@keyframes mouse-wheel {
+
+  0% {
+    top: 1px;
+  }
+
+  25% {
+    top: 2px;
+  }
+
+  50% {
+    top: 3px;
+  }
+
+  75% {
+    top: 2px;
+  }
+
+  100% {
+    top: 1px;
+  }
+}
+
+@-webkit-keyframes mouse-scroll {
+
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: .5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes mouse-scroll {
+
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: .5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes mouse-scroll {
+
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: .5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes mouse-scroll {
+
+  0% {
+    opacity: 0;
+  }
+}
+
+
+
+.pSpecialSize {
+  font-size: calc(1vw + 2vh);
+}
+
+.hSpecialSize {
+  font-size: calc(3vw + 3vh);
+}
+
+.imgSpecialSize {
+  height: clamp(1.75rem, 10vw, 5rem);
+  width: clamp(1.75rem, 10vw, 5rem);
+}
+
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0%);
+  }
+
+  50% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(100%);
+  }
+
+  50% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+
+}
+
+.animate-left-first {
+  animation: moveLeft 60s linear infinite;
+  animation-delay: 0s;
+}
+
+.animate-left-second {
+  animation: moveRight 60s linear infinite;
+  animation-delay: 0s;
+}
+
+.container-special {
+  font-size: calc(8vh + 7vw);
+}
+
+.container-special-two {
+  font-size: calc(2vh + 2vw);
+}
+
+.container-special-three {
+  font-size: calc(4vh + 3.5vw);
+}
+
+.container-special-four {
+  font-size: calc(2vh + 0.5vw);
+}
+
+.container-special-five {
+  font-size: calc(3vh + 1vw);
+
+}
+
+.container-special-six {
+  font-size: calc(3vh + 1vw);
+
+}
+
+/* .about .heading {
+  font-size: clamp(4.5rem, 12vw + 1rem, 7rem);
+}
+
+.about .text {
+  font-size: clamp(1.125rem, 3vw + 0.33rem, 2rem);
+} */
+
+
+.hero .heading {
+  font-size: clamp(5rem, 15vw, 11.5rem);
+}
+
+.hero .text {
+  font-size: clamp(1.5rem, 2.5vw, 3rem);
+}
