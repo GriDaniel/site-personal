@@ -33,6 +33,9 @@ export default {
         noto: ['Noto Sans Georgian', 'sans-serif'],
         roboto: ['Roboto', 'sans-serif'],
         jost: ['Jost', 'sans-serif'],
+        satoshi: ['Satoshi-Variable', 'sans-serif'],
+        satoshiM: ['Satoshi-Medium', 'sans-serif'],
+        satoshiL: ['Satoshi-Light', 'sans-serif'],
       }
 
     },

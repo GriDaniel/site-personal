@@ -28,14 +28,14 @@ function Hero({ darkMode, toggleDarkMode }) {
                         initial={{ opacity: 0, y: -1000 }}
                         animate={{ opacity: 1, y: 0, transition: { duration: 1.2, delay: 0.25 } }}
                         transition={{ type: 'spring', stiffness: 50 }}
-                        className="heading absolute container-special dark:text-[#DADDE2] text-[#303030] dark:z-auto z-[2] font-fjalla h-screen uppercase mb-[75px] lg:mt-[150px] mt-[180px] text-center flex flex-col justify-center items-center"
+                        className="heading absolute container-special dark:text-[#DADDE2] text-[#303030] dark:z-auto z-[2] font-satoshi h-screen uppercase mb-[75px] lg:mt-[150px] mt-[180px] text-center flex flex-col justify-center items-center"
                     >
                         Daniel Oliveira
                         <motion.div
                             initial={{ opacity: 0, y: 1000 }} // Initial hidden state for the typed animation
                             animate={{ opacity: 1, y: 0 }} // Animation to make it visible
                             transition={{ duration: 1, delay: 0.5 }} // Animation transition
-                            className='text font-sans h-[5%] capitalize font-light dark:text-[#DADDE2] text-[#303030] container-special-two'
+                            className='text  h-[5%] capitalize font-satoshiL dark:text-[#DADDE2] text-[#303030] container-special-two'
                         >
 
                             <TypeAnimation
@@ -70,10 +70,10 @@ function Hero({ darkMode, toggleDarkMode }) {
                         </motion.div>
                     </motion.div>
 
-                    <img src="img3.jpg" alt="" className="dark:visible invisible absolute h-full w-screen animate-left-first object-cover  bg-black opacity-[0.20]" />
+                    <img src="img3.jpg" alt="" className="dark:visible invisible absolute h-full w-screen animate-left-first object-cover  bg-black opacity-[0.05]" />
 
                     <img src="imgf3.jpg" alt="" className=" 
-  dark:visible invisible h-full w-screen  absolute object-cover animate-left-second bg-black opacity-[0.20]" />
+  dark:visible invisible h-full w-screen  absolute object-cover animate-left-second bg-black opacity-[0.05]" />
 
                     <img src="light.jpg" alt="" className="dark:invisible visible absolute h-full w-screen animate-left-first object-cover  bg-white opacity-[0.80]" />
 

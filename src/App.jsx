@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import viteLogo from '/vite.svg'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
+import AboutT from './components/AboutT'
 import Experience from './components/Experience'
 
 
@@ -33,7 +33,8 @@ function App() {
     <>
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Hero />
-      <About />
+      <AboutT/>
+      {/* <About /> */}
       {/* <Experience /> */}
     </>
   )
