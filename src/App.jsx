@@ -1,12 +1,15 @@
-import { useState } from 'react'
+import { useState} from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
 import AboutT from './components/AboutT'
 import Experience from './components/Experience'
+import Projects from './components/Projects'
+
 
 
 function App() {
+ 
   const [count, setCount] = useState(0);
 
   const [darkMode, setDarkMode] = useState(false);
@@ -18,7 +21,7 @@ function App() {
     localStorage.setItem('color-theme', newMode ? 'dark' : 'light');
   };
 
-  
+
   useState(() => {
     const storedTheme = localStorage.getItem('color-theme');
     if (storedTheme === 'dark' || (!storedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -33,9 +36,10 @@ function App() {
     <>
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Hero />
-      <AboutT/>
+      <AboutT darkMode={darkMode} />
+      <Experience />
+      <Projects />
       {/* <About /> */}
-      {/* <Experience /> */}
     </>
   )
 }

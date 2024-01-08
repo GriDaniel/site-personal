@@ -9,7 +9,7 @@ import anime from 'animejs';
 
 
 
-function Hero({ darkMode, toggleDarkMode }) {
+function Hero() {
     const containerVariants = {
         hidden: { y: '-100vh' },
         visible: { y: 0 },
@@ -21,7 +21,7 @@ function Hero({ darkMode, toggleDarkMode }) {
 
 
             <div id="title" className='hero main  wrapper h-screen min-w-screen select-none dark:bg-gradient-to-b from-black to-gray-950 bg-white  flex justify-center'>
-
+                
 
                 <div className="relative overflow-hidden h-full max:w-[1920px] w-full flex justify-center items-center">
                     <motion.div
@@ -38,7 +38,7 @@ function Hero({ darkMode, toggleDarkMode }) {
                             className='text  h-[5%] capitalize font-satoshiL dark:text-[#DADDE2] text-[#303030] container-special-two'
                         >
 
-                            <TypeAnimation
+                            {/* <TypeAnimation
                                 sequence={[
                                     '',
                                     1550,
@@ -50,7 +50,7 @@ function Hero({ darkMode, toggleDarkMode }) {
                                 wrapper="span"
                                 speed={90}
                                 repeat={Infinity}
-                            />
+                            /> */}
 
                         </motion.div>
                         <motion.div

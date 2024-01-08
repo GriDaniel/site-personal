@@ -3,10 +3,10 @@ import React from 'react';
 function Navbar({ darkMode, toggleDarkMode }) {
     return (
         <>
-            <nav class="fixed w-screen flex justify-center items-center z-20 top-0 left-0">
-                <div class="w-screen max:max-w-[1920px] lg:h-[80px] border-b-[3px] dark:border-[#0C171B] border-[#ACA9BB] dark:bg-[#050909] bg-[#FAF8FF] flex flex-row flex-wrap items-center justify-between px-4">
+            <nav class="fixed w-screen flex justify-center  items-center z-20 top-0 left-0">
+                <div class="w-screen max:max-w-[1920px] lg:h-[80px] border-b-[3px] dark:border-[#0C171B] border-[#ACA9BB] dark:bg-black bg-[#FAF8FF] flex flex-row flex-wrap items-center justify-between px-4">
                     <div className='dark:block hidden w-[100px] h-full relative'>
-                        <img className="h-full w-full" src='personal-logo.png'></img>
+                        <img className="h-full w-full" src='logof.png'></img>
                     </div>
                     <div className='block dark:hidden w-[100px] h-full relative'>
                         <img className="h-full w-full" src='personal-logol.png'></img>
@@ -39,7 +39,7 @@ function Navbar({ darkMode, toggleDarkMode }) {
                                 </svg>
                             </li>
                             <li className="group flex flex-row items-center justify-between relative py-2 lg:px-4 px-1">
-                                <a href="#" class="w-full md:hover:scale-[105%] hover:scale-[102%]  lg:px-4 px-1  block py-2   font-satoshi md:text-lg text-2xl rounded">Projects</a>
+                                <a href="#projects" class="w-full md:hover:scale-[105%] hover:scale-[102%]  lg:px-4 px-1  block py-2 font-satoshi md:text-lg text-2xl rounded">Projects</a>
                                 <svg className=" mr-[30px] hidden md:group-hover:hidden group-hover:block absolute top-1/2 right-4 -translate-y-1/2 transform" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.0519 14.8285L13.4661 16.2427L17.7088 12L13.4661 7.7574L12.0519 9.17161L13.8804 11H6.34321V13H13.8803L12.0519 14.8285Z" fill="currentColor" />
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7782 19.7782C24.0739 15.4824 24.0739 8.51759 19.7782 4.22183C15.4824 -0.0739417 8.51759 -0.0739417 4.22183 4.22183C-0.0739417 8.51759 -0.0739417 15.4824 4.22183 19.7782C8.51759 24.0739 15.4824 24.0739 19.7782 19.7782ZM18.364 18.364C21.8787 14.8492 21.8787 9.15076 18.364 5.63604C14.8492 2.12132 9.15076 2.12132 5.63604 5.63604C2.12132 9.15076 2.12132 14.8492 5.63604 18.364C9.15076 21.8787 14.8492 21.8787 18.364 18.364Z" fill="currentColor" />

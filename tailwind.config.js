@@ -20,7 +20,7 @@ export default {
       'lg': '1024px',
       'xl': '1280px',
       '2xl': '1536px',
-      'max':'1920px',
+      'max': '1920px',
     },
 
 
@@ -36,7 +36,23 @@ export default {
         satoshi: ['Satoshi-Variable', 'sans-serif'],
         satoshiM: ['Satoshi-Medium', 'sans-serif'],
         satoshiL: ['Satoshi-Light', 'sans-serif'],
-      }
+      },
+
+      boxShadow: {
+        'darkMode-button': `0 0 5px #FFFFFF,
+          0 0 25px #FFFFFF,
+          0 0 50px #FFFFFF,
+          0 0 100px #FFFFFF`,
+
+        'lightMode-button': `0 0 5px #5ab9ea,
+    0 0 25px #5ab9ea,
+    0 0 50px #5ab9ea,
+    0 0 200px #5ab9ea`,
+      },
+
+
+
+
 
     },
   },
