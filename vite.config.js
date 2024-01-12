@@ -5,4 +5,10 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: "/site-personal",
   plugins: [react()],
+  build: {
+    rollupOptions: {
+      external: ['/site-personal/assets/index-bdcb863d.js'],
+      
+    },
+  },
 })
