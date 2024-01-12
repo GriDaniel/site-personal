@@ -1,0 +1,50 @@
+{
+  "homepage": "https://GriDaniel.github.io/site-personal",
+  "name": "vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@react-three/fiber": "^8.15.13",
+    "animejs": "^3.2.1",
+    "flowbite": "^1.8.1",
+    "framer-motion": "^10.16.16",
+    "install": "^0.13.0",
+    "npm": "^10.2.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-intersection-observer": "^9.5.3",
+    "react-scrollama": "^2.3.3",
+    "react-three-fiber": "^6.0.13",
+    "react-tsparticles": "^2.12.2",
+    "react-type-animation": "^3.2.0",
+    "three": "^0.160.0",
+    "vant": "^4.8.1",
+    "vanta": "^0.5.24"
+  },
+  "devDependencies": {
+    "@iconify/react": "^4.1.1",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "autoprefixer": "^10.4.16",
+    "daisyui": "^3.9.3",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "gh-pages": "^6.1.1",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.3",
+    "vite": "^4.4.5"
+  }
+}
