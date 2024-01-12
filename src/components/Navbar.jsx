@@ -3,25 +3,25 @@ import React from 'react';
 function Navbar({ darkMode, toggleDarkMode }) {
     return (
         <>
-            <nav class="fixed w-screen flex justify-center  items-center z-20 top-0 left-0">
-                <div class="w-screen max:max-w-[1920px] lg:h-[80px] border-b-[3px] dark:border-[#0C171B] border-[#ACA9BB] dark:bg-black bg-[#FAF8FF] flex flex-row flex-wrap items-center justify-between px-4">
+            <nav className="fixed w-screen flex justify-center  items-center z-20 top-0 left-0">
+                <div className="w-screen max:max-w-[1920px] lg:h-[80px] border-b-[3px] dark:border-[#0C171B] border-[#ACA9BB] dark:bg-black bg-[#FAF8FF] flex flex-row flex-wrap items-center justify-between px-4">
                     <div className='dark:block hidden w-[100px] h-full relative'>
-                        <img className="h-full w-full" src='logof.png'></img>
+                        <img className="h-full w-full" src='public\images\name-logo.png'></img>
                     </div>
                     <div className='block dark:hidden w-[100px] h-full relative'>
-                        <img className="h-full w-full" src='personal-logol.png'></img>
+                        <img className="h-full w-full" src='public\images\personal-logol.png'></img>
                     </div>
-                    <div class="flex md:order-2 md:w-[1000px] w-[75px] items-center justify-end-reverse">
+                    <div className="flex md:order-2 md:w-[1000px] w-[75px] items-center justify-end-reverse">
                         <button data-collapse-toggle="navbar-sticky" type="button" class="ml-[10px] inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:scale-[130%]" aria-controls="navbar-sticky" aria-expanded="false">
-                            <span class="sr-only">Open main menu</span>
-                            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                            <span className="sr-only">Open main menu</span>
+                            <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
                             </svg>
                         </button>
                     </div>
-                    
-                    <div class="items-center md:h-full h-screen justify-center hidden md:flex lg:w-[850px] md:w-[616px] w-[725px] md:order-1 " id="navbar-sticky">
-                        <ul class="w-full dark:text-white text-[#303030] justify-center bg-transparent flex flex-col xl:gap-2 ml-[20px] lg:mr-[100px] mr-[75px] gap-0 py-4 md:p-0 font-medium rounded-lg md:flex-row md:space-x-8  md:border-0">
+
+                    <div className="items-center md:h-full h-screen justify-center hidden md:flex lg:w-[850px] md:w-[616px] w-[725px] md:order-1 " id="navbar-sticky">
+                        <ul className="w-full dark:text-white text-[#303030] justify-center bg-transparent flex flex-col xl:gap-2 ml-[20px] lg:mr-[100px] mr-[75px] gap-0 py-4 md:p-0 font-medium rounded-lg md:flex-row md:space-x-8  md:border-0">
                             <li className="group py-2 lg:px-4 px-1 flex flex-row items-center justify-between relative" href="#about">
                                 <a href="#about" className="md:hover:scale-[105%] hover:scale-[102%] w-full z-20 lg:px-4 px-1 block py-2 font-satoshi md:text-lg text-2xl" aria-current="page">
                                     About
@@ -46,14 +46,14 @@ function Navbar({ darkMode, toggleDarkMode }) {
                                 </svg>
                             </li>
                             <li className="group flex flex-row items-center justify-between relative py-2 lg:px-4 px-1">
-                                <a href="#" class="w-full md:hover:scale-[105%] hover:scale-[102%]  lg:px-4 px-1 block py-2 font-satoshi md:text-lg text-2xl rounded">Resume</a>
+                                <a href="https://drive.google.com/file/d/1acwKtKYfRR21OD6UlxZUu_-hRp2HGxow/view?usp=sharing" class="w-full md:hover:scale-[105%] hover:scale-[102%]  lg:px-4 px-1 block py-2 font-satoshi md:text-lg text-2xl rounded">Resume</a>
                                 <svg className=" mr-[30px] hidden md:group-hover:hidden group-hover:block absolute top-1/2 right-4 -translate-y-1/2 transform" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.0519 14.8285L13.4661 16.2427L17.7088 12L13.4661 7.7574L12.0519 9.17161L13.8804 11H6.34321V13H13.8803L12.0519 14.8285Z" fill="currentColor" />
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7782 19.7782C24.0739 15.4824 24.0739 8.51759 19.7782 4.22183C15.4824 -0.0739417 8.51759 -0.0739417 4.22183 4.22183C-0.0739417 8.51759 -0.0739417 15.4824 4.22183 19.7782C8.51759 24.0739 15.4824 24.0739 19.7782 19.7782ZM18.364 18.364C21.8787 14.8492 21.8787 9.15076 18.364 5.63604C14.8492 2.12132 9.15076 2.12132 5.63604 5.63604C2.12132 9.15076 2.12132 14.8492 5.63604 18.364C9.15076 21.8787 14.8492 21.8787 18.364 18.364Z" fill="currentColor" />
                                 </svg>
                             </li>
                             <li className="group flex flex-row items-center justify-between relative py-2 lg:px-4 px-1">
-                                <a href="#about" className='w-full relative group'>
+                                <a href="#contact" className='w-full relative group'>
                                     <button type="button" class="dark:text-black text-white dark:bg-white bg-[#303030] rounded-full font-satoshi md:text-lg text-2xl lg:px-4 px-5 py-2 text-center md:mr-0 group-hover:scale-105">Contact</button>
                                 </a>
                                 <svg className="mr-[15px] hidden md:group-hover:hidden group-hover:block absolute top-1/2 right-4 -translate-y-1/2 transform" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -65,7 +65,7 @@ function Navbar({ darkMode, toggleDarkMode }) {
                                 <button
                                     id="theme-toggle"
                                     type="button"
-                                    className="text-gray-500 hover:scale-[105%] rounded-lg text-sm md:visible invisible"
+                                    className="text-gray-500 hover:scale-[105%] rounded-lg text-sm "
                                     onClick={toggleDarkMode}
 
                                 >

@@ -1,4 +1,4 @@
-@import url("C:\Users\danis\OneDrive\Desktop\Personal\site-personal\public\css\satoshi.css");
+@import url("public\css\satoshi.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -310,9 +310,6 @@ html {
   animation-delay: 0s;
 }
 
-.container-special {
-  font-size: calc(8vh + 7vw);
-}
 
 .container-special-two {
   font-size: calc(2vh + 2vw);

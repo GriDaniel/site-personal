@@ -6,6 +6,8 @@ import { useInView } from 'react-intersection-observer';
 
 function Projects() {
 
+
+
     const carousel1Ref = useRef(null);
     const carousel2Ref = useRef(null);
 
@@ -41,33 +43,39 @@ function Projects() {
         };
     }, []);
 
-    const carousel3Ref = useRef(null);
-    const carousel4Ref = useRef(null);
+
+    const carouselImageRef = useRef(null); // Reference to the scrollable carousel with images
+    const carouselTextRef = useRef(null); // Reference to the non-scrollable carousel with text
 
     useEffect(() => {
-        const carousel3 = carousel3Ref.current;
-        const carousel4 = carousel4Ref.current;
+        const carouselImage = carouselImageRef.current;
+        const carouselText = carouselTextRef.current;
+        let lastKnownScrollPosition = 0;
+        let ticking = false;
 
-        const syncScroll = (source, target) => {
-            if (!source || !target) return;
-
-            let isSyncing = false;
-
-            source.addEventListener('scroll', () => {
-                if (!isSyncing) {
-                    isSyncing = true;
-                    target.scrollTop = source.scrollTop;
-                    isSyncing = false;
-                }
-            });
+        const syncScroll = () => {
+            const imageScrollPosition = carouselImage.scrollTop;
+            // Assuming each image and text block have the same height
+            carouselText.scrollTop = imageScrollPosition;
         };
 
-        syncScroll(carousel3, carousel4);
-        syncScroll(carousel4, carousel3);
+        const handleScroll = () => {
+            lastKnownScrollPosition = carouselImage.scrollTop;
+
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    syncScroll(lastKnownScrollPosition);
+                    ticking = false;
+                });
+
+                ticking = true;
+            }
+        };
+
+        carouselImage.addEventListener('scroll', handleScroll);
 
         return () => {
-            carousel3.removeEventListener('scroll', syncScroll);
-            carousel4.removeEventListener('scroll', syncScroll);
+            carouselImage.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
@@ -81,17 +89,28 @@ function Projects() {
 
     const animationVariants = {
         hidden: { opacity: 1, x: '-100vw' },
-        visible: { opacity: 1, x: '0%', transition: { duration: 0.5 } },
+        visible: { opacity: 1, x: '0%', transition: { duration: 1 } },
     };
 
 
 
     const animationVariants2 = {
+        hidden: { opacity: 0, x: '100vw' },
+        visible: {
+            opacity: 1, x: '0%', transition: {
+                duration: 1,
+
+
+            }
+        },
+    };
+
+    const animationVariants3 = {
         hidden: { opacity: 0, y: '-100vh' },
         visible: {
             opacity: 1, y: '0%', transition: {
-                duration: 0.6,
-                delay: 0,
+                duration: 1,
+
 
             }
         },
@@ -99,16 +118,20 @@ function Projects() {
     return (
         <div id="projects" ref={ref} className='min-w-screen overflow-x-hidden overflow-hidden flex justify-center items-center dark:bg-black bg-[#F4F4F4]'>
             <div className='max:w-[1920px] w-screen dark:bg-black bg-[#F4F4F4] flex justify-center flex-col'>
-                <div className='w-full h-[100px] mt-[120px] flex md:justify-normal justify-center'>
-                    <div className='w-[80%] h-full lg:ml-[100px] md:ml-[20px]  '>
-                        <h1 className='dark:text-[#DADDE2] h1-special text-black  md:mt-0 mt-[100px] sm:text-8xl text-7xl font-satoshi font-bold'>Projects</h1>
+                <motion.div initial="hidden"
+                    animate={inView ? 'visible' : 'hidden'}
+                    variants={animationVariants3} className='w-full h-[100px] md:mt-[120px] mt-[50px] flex md:justify-normal justify-center'>
 
-                    </div>
-                </div>
+                    <h1 className='md:ml-[20px] lg:ml-[100px] w-[80%] dark:text-[#DADDE2] h1-special text-black  md:mt-0 mt-[100px] sm:text-8xl text-7xl font-satoshi font-bold'>Projects</h1>
 
-                <div className='w-full  min-h-[800px] flex md:flex-row flex-col mt-[100px] gap-[100px] justify-center'>
 
-                    <div ref={carousel1Ref} class="mt-[100px] pointer-events-none md:hidden min-h-[550px] carousel rounded-box">
+                </motion.div>
+
+                <div className='w-full md:h-[800px] min-h-[800px] flex md:flex-row flex-col md:mt-[100px] mt-[40px] md:gap-[100px] gap-[0px] justify-center'>
+
+
+
+                    <div ref={carousel1Ref} className="mt-[100px] pointer-events-none md:hidden min-h-[550px] carousel rounded-box">
                         <div className="border-b-transparent carousel-item h-full w-screen flex items-center flex-col dark:bg-black bg-[#F4F4F4]">
                             <div className='w-[80%] flex items-center justify-between'>
                                 <h1 className='font-satoshi text-[60px] dark:text-[#DADDE2] text-black'>Novus Car</h1>
@@ -121,11 +144,11 @@ function Projects() {
                             <p className='w-[80%] text-black dark:text-[#DADDE2] mt-[65px] text-3xl'>
                                 1st place winners, devising programming solutions to enhance the features and preformance of autonomous vehicles.
                             </p>
-                            <a className='mt-[100px] mx-auto ' href='https://gridaniel.github.io/Ortobom-Quiz/' target='blank'>
+                            <a className='mt-[100px] mx-auto ' href='https://github.com/Swwwerve/NovusCar' target='blank'>
                                 <button className='pointer-events-auto dark:hover:shadow-darkMode-button hover:shadow-lightMode-button dark:bg-[#060B0B] bg-gray-300 dark:hover:bg-[#FAF8FF] button flex row items-center gap-3 font-satoshi text-[30px] dark:hover:text-black dark:text-[#DADDE2] text-black'>
                                     Learn More
 
-                                    <img className='w-[30px] h-[30px]' src="proc.png" alt="" />
+                                    <img className='w-[30px] h-[30px]' src="public\images\new-tab.png" alt="" />
 
                                 </button>
                             </a>
@@ -142,11 +165,11 @@ function Projects() {
                             <p className='w-[80%] text-black dark:text-[#DADDE2] mt-[65px] text-3xl'>
                                 Competed by using machine learning to train a model that extracts vital data from extensive space biology datasets, aiding in determining the impact of space travel on human bone health.
                             </p>
-                            <a className='mt-[100px] mx-auto ' href='https://gridaniel.github.io/Ortobom-Quiz/' target='blank'>
+                            <a className='mt-[100px] mx-auto ' href='https://github.com/Achen2804/NasaTime' target='blank'>
                                 <button className='pointer-events-auto dark:hover:shadow-darkMode-button hover:shadow-lightMode-button dark:bg-[#060B0B] bg-gray-300 dark:hover:bg-[#FAF8FF] button flex row items-center gap-3 font-satoshi text-[30px] dark:hover:text-black dark:text-[#DADDE2] text-black'>
                                     Learn More
 
-                                    <img className='w-[30px] h-[30px]' src="proc.png" alt="" />
+                                    <img className='w-[30px] h-[30px]' src="public\images\new-tab.png" alt="" />
 
                                 </button>
                             </a>
@@ -164,24 +187,24 @@ function Projects() {
                                 Challenged other designers by designing a non-motorized mechanical system to protect electrical
                                 connectors from debris in space using AutoDesk Inventor.
                             </p>
-                            <a className='mt-[100px] mx-auto ' href='https://gridaniel.github.io/Ortobom-Quiz/' target='blank'>
+                            <a className='mt-[100px] mx-auto ' href='https://drive.google.com/drive/folders/1yRbgQakXEV3RKcN3VuTO3bHrm6SJnn3d?usp=sharing' target='blank'>
                                 <button className='pointer-events-auto dark:hover:shadow-darkMode-button hover:shadow-lightMode-button dark:bg-[#060B0B] bg-gray-300 dark:hover:bg-[#FAF8FF] button flex row items-center gap-3 font-satoshi text-[30px] dark:hover:text-black dark:text-[#DADDE2] text-black'>
                                     Learn More
 
-                                    <img className='w-[30px] h-[30px]' src="proc.png" alt="" />
+                                    <img className='w-[30px] h-[30px]' src="public\images\new-tab.png" alt="" />
 
                                 </button>
                             </a>
                         </div>
                     </div>
 
-                    <div ref={carousel2Ref} class="md:hidden h-[700px] w-[80%] mx-auto carousel rounded-[50px]">
+                    <div ref={carousel2Ref} className="md:hidden h-[700px] w-[80%] mx-auto carousel rounded-[50px]">
 
                         <div className="carousel-item w-full relative h-full flex justify-center">
-                            <img className='w-full h-full object-cover' src="ONEHERE.jpg" />
+                            <img className='w-full h-full object-cover' src="public\images\carousel-one.jpg" />
 
                             <div className='absolute h-full w-full'>
-                                <img className='relative w-[150px] h-[150px]' src="handnew.png" alt="" />
+                                <img className='relative w-[150px] h-[150px]' src="public\images\swipe-indicator.png" alt="" />
                             </div>
 
 
@@ -191,19 +214,21 @@ function Projects() {
 
                         </div>
                         <div className="carousel-item w-full h-full flex justify-center">
-                            <img className='w-full  h-full object-cover' src="polg.jpg" />
+                            <img className='w-full  h-full object-cover' src="public\images\carousel-two.jpg" />
 
 
 
                         </div>
                         <div className="carousel-item w-full h-full flex justify-center">
-                            <img className='w-full  h-full object-cover' src="charg3.jpg" />
+                            <img className='w-full  h-full object-cover' src="public\images\carousel-three.jpg" />
 
                         </div>
                     </div>
 
-                    <div ref={carousel3Ref} className="pointer-events-none md:flex hidden shadow-none min-h-[800px] w-[700px] carousel md:carousel-vertical flex-row overflow-x-scroll snap-x rounded-lg mr-auto lg:ml-[100px] md:ml-[20px]">
-                        <div className="carousel-item h-full flex flex-col dark:bg-black bg-[#F4F4F4]">
+                    <motion.div className="pointer-events-none md:flex md:relative absolute hidden shadow-none min-h-[800px] w-[700px] carousel md:carousel-vertical flex-row overflow-x-scroll snap-x rounded-lg mr-auto lg:ml-[100px] md:ml-[20px]" ref={carouselTextRef} initial="hidden"
+                        animate={inView ? 'visible' : 'hidden'}
+                        variants={animationVariants} >
+                        <div className="carousel-item h-full md:flex hidden flex-col dark:bg-black bg-[#F4F4F4]">
                             <div className='w-full flex items-center justify-between'>
                                 <h1 className='font-satoshi text-[60px] dark:text-[#DADDE2] text-black'>Novus Car</h1>
 
@@ -215,16 +240,16 @@ function Projects() {
                             <p className='text-black dark:text-[#DADDE2] mt-[65px] text-3xl'>
                                 1st place winners, devising programming solutions to enhance the features and preformance of autonomous vehicles.
                             </p>
-                            <a className='mt-[100px] h-full mx-auto ' href='https://gridaniel.github.io/Ortobom-Quiz/' target='blank'>
+                            <a className='mt-[100px] h-full mx-auto ' href='https://github.com/Swwwerve/NovusCar' target='blank'>
                                 <button className='pointer-events-auto dark:hover:shadow-darkMode-button hover:shadow-lightMode-button dark:bg-[#060B0B] bg-gray-300 dark:hover:bg-[#FAF8FF] button flex row items-center gap-3 font-satoshi text-[30px] dark:hover:text-black dark:text-[#DADDE2] text-black'>
                                     Learn More
 
-                                    <img className='w-[30px] h-[30px]' src="proc.png" alt="" />
+                                    <img className='w-[30px] h-[30px]' src="public\images\new-tab.png" alt="" />
 
                                 </button>
                             </a>
                         </div>
-                        <div className="carousel-item h-full flex flex-col dark:bg-black bg-[#F4F4F4]">
+                        <div className="carousel-item h-full md:flex hidden flex-col dark:bg-black bg-[#F4F4F4]">
                             <div className='w-full flex items-center justify-between'>
                                 <h1 className='font-satoshi text-[60px] dark:text-[#DADDE2] text-black'>Nasa Squad</h1>
 
@@ -236,16 +261,16 @@ function Projects() {
                             <p className='text-black dark:text-[#DADDE2] mt-[65px] text-3xl'>
                                 Competed by using machine learning to train a model that extracts vital data from extensive space biology datasets, aiding in determining the impact of space travel on human bone health.
                             </p>
-                            <a className='mt-[100px] mx-auto ' href='https://gridaniel.github.io/Ortobom-Quiz/' target='blank'>
+                            <a className='mt-[100px] mx-auto ' href='https://github.com/Achen2804/NasaTime' target='blank'>
                                 <button className='pointer-events-auto dark:hover:shadow-darkMode-button hover:shadow-lightMode-button dark:bg-[#060B0B] bg-gray-300 dark:hover:bg-[#FAF8FF] button flex row items-center gap-3 font-satoshi text-[30px] dark:hover:text-black dark:text-[#DADDE2] text-black'>
                                     Learn More
 
-                                    <img className='w-[30px] h-[30px]' src="proc.png" alt="" />
+                                    <img className='w-[30px] h-[30px]' src="public\images\new-tab.png" alt="" />
 
                                 </button>
                             </a>
                         </div>
-                        <div className="carousel-item h-full flex flex-col dark:bg-black bg-[#F4F4F4]">
+                        <div className="carousel-item h-full md:flex hidden flex-col dark:bg-black bg-[#F4F4F4]">
                             <div className=' w-full flex items-center justify-between'>
                                 <h1 className='h1-special font-satoshi text-[60px] dark:text-[#DADDE2] text-black'>CAD Designathon</h1>
 
@@ -258,23 +283,25 @@ function Projects() {
                                 Challenged other designers by designing a non-motorized mechanical system to protect electrical
                                 connectors from debris in space using AutoDesk Inventor.
                             </p>
-                            <a className='mt-[100px] mx-auto ' href='https://gridaniel.github.io/Ortobom-Quiz/' target='blank'>
+                            <a className='mt-[100px] mx-auto ' href='https://drive.google.com/drive/folders/1yRbgQakXEV3RKcN3VuTO3bHrm6SJnn3d?usp=sharing' target='blank'>
                                 <button className='pointer-events-auto dark:hover:shadow-darkMode-button hover:shadow-lightMode-button dark:bg-[#060B0B] bg-gray-300 dark:hover:bg-[#FAF8FF] button flex row items-center gap-3 font-satoshi text-[30px] dark:hover:text-black dark:text-[#DADDE2] text-black'>
                                     Learn More
 
-                                    <img className='w-[30px] h-[30px]' src="proc.png" alt="" />
+                                    <img className='w-[30px] h-[30px]' src="public\images\new-tab.png" alt="" />
 
                                 </button>
                             </a>
                         </div>
 
-                    </div>
+                    </motion.div>
 
 
 
-                    <div ref={carousel4Ref} className="md:flex hidden translate-y-[-20%] h-[700px] w-[900px] md:justify-normal justify-center carousel md:carousel-vertical flex-row md:rounded-[50px] mr-[100px]">
-                        <div className="carousel-item h-full">
-                            <img className='w-full  h-full object-cover' src="ONEHERE.jpg" />
+                    <motion.div ref={carouselImageRef} initial="hidden"
+                        animate={inView ? 'visible' : 'hidden'}
+                        variants={animationVariants2} className="md:relative absolute md:flex hidden translate-y-[-20%] h-[700px] w-[900px] md:justify-normal justify-center carousel md:carousel-vertical flex-row md:rounded-[50px] mr-[100px]">
+                        <div className="carousel-item md:block hidden h-full">
+                            <img className='w-full  h-full object-cover' src="public\images\carousel-one.jpg" />
                             <div className="absolute left-[10%] top-[0%] scale-[200%] mouse_scroll mx-auto block w-[24px] lg:mt-[100px] mt-[50px]">
                                 <div className="mouse mt dark:bg-transparent bg-black border-2 dark:border-white border-[#303030]">
                                     <div className="wheel"></div>
@@ -288,18 +315,18 @@ function Projects() {
 
 
                         </div>
-                        <div className="carousel-item h-full">
-                            <img className='w-full  h-full object-cover' src="polg.jpg" />
+                        <div className="md:block hidden carousel-item h-full">
+                            <img className='w-full  h-full object-cover' src="public\images\carousel-two.jpg" />
 
 
 
                         </div>
-                        <div className="carousel-item h-full">
-                            <img className='w-full  h-full object-cover' src="charg3.jpg" />
+                        <div className="md:block hidden carousel-item h-full">
+                            <img className='w-full  h-full object-cover' src="public\images\carousel-three.jpg" />
 
                         </div>
 
-                    </div>
+                    </motion.div>
 
 
 

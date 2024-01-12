@@ -32,7 +32,7 @@ function Experience() {
 
 
     return (
-        <div id="experience" ref={ref} className='pb-[125px] min-w-screen overflow-x-hidden overflow-hidden flex justify-center  dark:bg-black bg-[#F4F4F4]'>
+        <div id="experience" ref={ref} className='md:pb-[0px] pb-0 min-w-screen overflow-x-hidden overflow-hidden flex justify-center  dark:bg-black bg-[#F4F4F4]'>
             <div className='max:w-[1920px] md:mt-[80px] mt-[75px] w-screen min-h-[950px] dark:bg-black bg-[#F4F4F4] flex items-center justify-center md:flex-row flex-col'>
                 <motion.div
 
@@ -69,28 +69,28 @@ function Experience() {
                     initial="hidden"
                     animate={inView ? 'visible' : 'hidden'}
                     variants={animationVariants2}
-                    className='md:h-full w-[50%] min-h-[700px] pb-[125px] flex flex-col items-center justify-center'
+                    className='md:h-full w-[50%] min-h-[700px] md:pb-[125px] flex flex-col items-center justify-center'
 
                 >
                     <div className='mt-[100px] w-[650px] h-[400px]'>
-                        <img className='500:scale-[120%] 380:scale-[90%] scale-[70%] w-full h-full' src="mega.png" alt="" />
+                        <img className='500:scale-[120%] 380:scale-[90%] scale-[70%] w-full h-full' src="public\images\exp-mockup.png" alt="" />
                     </div>
                     <div className='w-[269px] pb-[50px] md:pb-0 min-h-[100px] gap-5 flex flex-row items-center justify-center mt-[100px] '>
                         <a href='https://gridaniel.github.io/Ortobom-Quiz/' target='blank'>
                             <button className='dark:hover:shadow-darkMode-button hover:shadow-lightMode-button dark:bg-[#060B0B] bg-gray-300 dark:hover:bg-[#FAF8FF] button flex row items-center gap-3 font-satoshi text-[30px] dark:hover:text-black dark:text-[#DADDE2] text-black'>
                                 View
 
-                                <img className='w-[30px] h-[30px]' src="proc.png" alt="" />
+                                <img className='w-[30px] h-[30px]' src="public\images\new-tab.png" alt="" />
 
                             </button>
                         </a>
 
                         <button className='dark:bg-[#060B0B] dark:hover:bg-white hover:shadow-lightMode-button bg-gray-300 dark:hover:shadow-darkMode-button button-two'>
                             <a href='https://github.com/GriDaniel/Ortobom-Landing-Website.git' target='blank' className='dark:block hidden'>
-                                <img className='w-[74px] h-[74px]' src="gitPANG.png" alt="" />
+                                <img className='w-[74px] h-[74px]' src="public\images\git-light.png" alt="" />
                             </a>
                             <a href='https://github.com/GriDaniel/Ortobom-Landing-Website.git' target='blank' className='dark:hidden block'>
-                                <img className='w-[74px] h-[74px]' src="POSSIBLE.png" alt="" />
+                                <img className='w-[74px] h-[74px]' src="public\images\git-dark.png" alt="" />
                             </a>
 
                         </button>

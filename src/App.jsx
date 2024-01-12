@@ -2,9 +2,9 @@ import { useState} from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
-import AboutT from './components/AboutT'
 import Experience from './components/Experience'
 import Projects from './components/Projects'
+import Contact from './components/Contact'
 
 
 
@@ -36,10 +36,10 @@ function App() {
     <>
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Hero />
-      <AboutT darkMode={darkMode} />
+      <About darkMode={darkMode} />
       <Experience />
       <Projects />
-      {/* <About /> */}
+      <Contact/>
     </>
   )
 }
