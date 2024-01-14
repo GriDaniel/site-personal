@@ -16,16 +16,16 @@ function Contact() {
                         <div className='h-full w-[40px] flex flex-col justify-center items-center'>
                             <div className='h-full w-full flex flex-col justify-end gap-5'>
                                 <a href='https://www.linkedin.com/in/dangoliveira/' target='blank' className='w-[40px] h-[40px] dark:block hidden'>
-                                    <img id="myImage" className='hover:scale-105 w-full h-full' src="public\images\linked-light.png"/>
+                                    <img id="myImage" className='hover:scale-105 w-full h-full' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/linked-light.png?raw=true"/>
                                 </a>
                                 <a href='https://www.linkedin.com/in/dangoliveira/' target='blank' className='w-[40px] h-[40px] dark:hidden dark'>
-                                    <img id="myImage" className='hover:scale-105 w-full h-full' src="public\images\linked-dark.png"/>
+                                    <img id="myImage" className='hover:scale-105 w-full h-full' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/linked-dark.png?raw=true"/>
                                 </a>
                                 <a href='https://github.com/GriDaniel' target='blank' className='w-[40px] h-[40px] dark:block hidden'>
-                                    <img className='hover:scale-105 w-full h-full' src="public\images\git-light.png" />
+                                    <img className='hover:scale-105 w-full h-full' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/git-light.png?raw=true" />
                                 </a>
                                 <a href='https://github.com/GriDaniel' target='blank' className='w-[40px] h-[40px] dark:hidden block'>
-                                    <img className='hover:scale-105 rounded-full  w-full h-full' src="public\images\git-dark.png"/>
+                                    <img className='hover:scale-105 rounded-full  w-full h-full' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/git-dark.png?raw=true"/>
                                 </a>
                                 <a href="">
                                     <svg className='dark:block hover:scale-105 hidden w-[40px] h-[40px]' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="mail"><path fill="#ffffff" d="M16,14.81,28.78,6.6A3,3,0,0,0,27,6H5a3,3,0,0,0-1.78.6Z" class="color231f20 svgShape"></path><path fill="#ffffff" d="M16.54,16.84h0l-.17.08-.08,0A1,1,0,0,1,16,17h0a1,1,0,0,1-.25,0l-.08,0-.17-.08h0L2.1,8.26A3,3,0,0,0,2,9V23a3,3,0,0,0,3,3H27a3,3,0,0,0,3-3V9a3,3,0,0,0-.1-.74Z" class="color231f20 svgShape"></path></svg>

@@ -148,7 +148,7 @@ function Projects() {
                                 <button className='pointer-events-auto dark:hover:shadow-darkMode-button hover:shadow-lightMode-button dark:bg-[#060B0B] bg-gray-300 dark:hover:bg-[#FAF8FF] button flex row items-center gap-3 font-satoshi text-[30px] dark:hover:text-black dark:text-[#DADDE2] text-black'>
                                     Learn More
 
-                                    <img className='w-[30px] h-[30px]' src="public\images\new-tab.png" alt="" />
+                                    <img className='w-[30px] h-[30px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/new-tab.png?raw=true" alt="" />
 
                                 </button>
                             </a>
@@ -169,7 +169,7 @@ function Projects() {
                                 <button className='pointer-events-auto dark:hover:shadow-darkMode-button hover:shadow-lightMode-button dark:bg-[#060B0B] bg-gray-300 dark:hover:bg-[#FAF8FF] button flex row items-center gap-3 font-satoshi text-[30px] dark:hover:text-black dark:text-[#DADDE2] text-black'>
                                     Learn More
 
-                                    <img className='w-[30px] h-[30px]' src="public\images\new-tab.png" alt="" />
+                                    <img className='w-[30px] h-[30px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/new-tab.png?raw=true" alt="" />
 
                                 </button>
                             </a>
@@ -191,7 +191,7 @@ function Projects() {
                                 <button className='pointer-events-auto dark:hover:shadow-darkMode-button hover:shadow-lightMode-button dark:bg-[#060B0B] bg-gray-300 dark:hover:bg-[#FAF8FF] button flex row items-center gap-3 font-satoshi text-[30px] dark:hover:text-black dark:text-[#DADDE2] text-black'>
                                     Learn More
 
-                                    <img className='w-[30px] h-[30px]' src="public\images\new-tab.png" alt="" />
+                                    <img className='w-[30px] h-[30px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/new-tab.png?raw=true" alt="" />
 
                                 </button>
                             </a>
@@ -201,10 +201,10 @@ function Projects() {
                     <div ref={carousel2Ref} className="md:hidden h-[700px] w-[80%] mx-auto carousel rounded-[50px]">
 
                         <div className="carousel-item w-full relative h-full flex justify-center">
-                            <img className='w-full h-full object-cover' src="public\images\carousel-one.jpg" />
+                            <img className='w-full h-full object-cover' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/carousel-one.jpg?raw=true" />
 
                             <div className='absolute h-full w-full'>
-                                <img className='relative w-[150px] h-[150px]' src="public\images\swipe-indicator.png" alt="" />
+                                <img className='relative w-[150px] h-[150px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/swiper-indicator.png?raw=true" alt="" />
                             </div>
 
 
@@ -214,13 +214,13 @@ function Projects() {
 
                         </div>
                         <div className="carousel-item w-full h-full flex justify-center">
-                            <img className='w-full  h-full object-cover' src="public\images\carousel-two.jpg" />
+                            <img className='w-full  h-full object-cover' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/carousel-two.jpg?raw=true" />
 
 
 
                         </div>
                         <div className="carousel-item w-full h-full flex justify-center">
-                            <img className='w-full  h-full object-cover' src="public\images\carousel-three.jpg" />
+                            <img className='w-full  h-full object-cover' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/carousel-three.jpg?raw=true" />
 
                         </div>
                     </div>
@@ -244,7 +244,7 @@ function Projects() {
                                 <button className='pointer-events-auto dark:hover:shadow-darkMode-button hover:shadow-lightMode-button dark:bg-[#060B0B] bg-gray-300 dark:hover:bg-[#FAF8FF] button flex row items-center gap-3 font-satoshi text-[30px] dark:hover:text-black dark:text-[#DADDE2] text-black'>
                                     Learn More
 
-                                    <img className='w-[30px] h-[30px]' src="public\images\new-tab.png" alt="" />
+                                    <img className='w-[30px] h-[30px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/new-tab.png.png?raw=true" alt="" />
 
                                 </button>
                             </a>
@@ -265,7 +265,7 @@ function Projects() {
                                 <button className='pointer-events-auto dark:hover:shadow-darkMode-button hover:shadow-lightMode-button dark:bg-[#060B0B] bg-gray-300 dark:hover:bg-[#FAF8FF] button flex row items-center gap-3 font-satoshi text-[30px] dark:hover:text-black dark:text-[#DADDE2] text-black'>
                                     Learn More
 
-                                    <img className='w-[30px] h-[30px]' src="public\images\new-tab.png" alt="" />
+                                    <img className='w-[30px] h-[30px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/new-tab.png?raw=true" alt="" />
 
                                 </button>
                             </a>
@@ -287,7 +287,7 @@ function Projects() {
                                 <button className='pointer-events-auto dark:hover:shadow-darkMode-button hover:shadow-lightMode-button dark:bg-[#060B0B] bg-gray-300 dark:hover:bg-[#FAF8FF] button flex row items-center gap-3 font-satoshi text-[30px] dark:hover:text-black dark:text-[#DADDE2] text-black'>
                                     Learn More
 
-                                    <img className='w-[30px] h-[30px]' src="public\images\new-tab.png" alt="" />
+                                    <img className='w-[30px] h-[30px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/new-tab.png?raw=true" alt="" />
 
                                 </button>
                             </a>
@@ -301,7 +301,7 @@ function Projects() {
                         animate={inView ? 'visible' : 'hidden'}
                         variants={animationVariants2} className="md:relative absolute md:flex hidden translate-y-[-20%] h-[700px] w-[900px] md:justify-normal justify-center carousel md:carousel-vertical flex-row md:rounded-[50px] mr-[100px]">
                         <div className="carousel-item md:block hidden h-full">
-                            <img className='w-full  h-full object-cover' src="public\images\carousel-one.jpg" />
+                            <img className='w-full  h-full object-cover' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/carousel-one.jpg?raw=true" />
                             <div className="absolute left-[10%] top-[0%] scale-[200%] mouse_scroll mx-auto block w-[24px] lg:mt-[100px] mt-[50px]">
                                 <div className="mouse mt dark:bg-transparent bg-black border-2 dark:border-white border-[#303030]">
                                     <div className="wheel"></div>
@@ -316,13 +316,13 @@ function Projects() {
 
                         </div>
                         <div className="md:block hidden carousel-item h-full">
-                            <img className='w-full  h-full object-cover' src="public\images\carousel-two.jpg" />
+                            <img className='w-full  h-full object-cover' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/carousel-two.jpg?raw=true" />
 
 
 
                         </div>
                         <div className="md:block hidden carousel-item h-full">
-                            <img className='w-full  h-full object-cover' src="public\images\carousel-three.jpg" />
+                            <img className='w-full  h-full object-cover' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/carousel-three.jpg?raw=true" />
 
                         </div>
 

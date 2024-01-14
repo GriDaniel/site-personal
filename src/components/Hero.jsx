@@ -70,14 +70,14 @@ function Hero() {
                         </motion.div>
                     </motion.div>
 
-                    <img src="public\images\dark.jpg" alt="" className="dark:visible invisible absolute h-full w-screen animate-left-first object-cover  bg-black opacity-[0.05]" />
+                    <img src="https://github.com/GriDaniel/site-personal/blob/main/public/images/dark.jpg?raw=true" alt="" className="dark:visible invisible absolute h-full w-screen animate-left-first object-cover  bg-black opacity-[0.05]" />
 
-                    <img src="public\images\darkf.jpg" alt="" className=" 
+                    <img src="https://github.com/GriDaniel/site-personal/blob/main/public/images/darkf.jpg?raw=true" alt="" className=" 
   dark:visible invisible h-full w-screen  absolute object-cover animate-left-second bg-black opacity-[0.05]" />
 
-                    <img src="public\images\light.jpg" alt="" className="dark:invisible visible absolute h-full w-screen animate-left-first object-cover  bg-white opacity-[0.80]" />
+                    <img src="https://github.com/GriDaniel/site-personal/blob/main/public/images/light.jpg?raw=true" alt="" className="dark:invisible visible absolute h-full w-screen animate-left-first object-cover  bg-white opacity-[0.80]" />
 
-                    <img src="public\images\lightf.jpg" alt="" className=" 
+                    <img src="https://github.com/GriDaniel/site-personal/blob/main/public/images/lightf.jpg?raw=true" alt="" className=" 
 dark:invisible visible h-full w-screen  absolute object-cover animate-left-second bg-white opacity-[0.80]" />
                     
 

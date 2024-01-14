@@ -6,10 +6,10 @@ function Navbar({ darkMode, toggleDarkMode }) {
             <nav className="fixed w-screen flex justify-center  items-center z-20 top-0 left-0">
                 <div className="w-screen max:max-w-[1920px] lg:h-[80px] border-b-[3px] dark:border-[#0C171B] border-[#ACA9BB] dark:bg-black bg-[#FAF8FF] flex flex-row flex-wrap items-center justify-between px-4">
                     <div className='dark:block hidden w-[100px] h-full relative'>
-                        <img className="h-full w-full" src='public\images\name-logo.png'></img>
+                        <img className="h-full w-full" src='https://github.com/GriDaniel/site-personal/blob/main/public/images/name-logo.png?raw=true'></img>
                     </div>
                     <div className='block dark:hidden w-[100px] h-full relative'>
-                        <img className="h-full w-full" src='public\images\personal-logol.png'></img>
+                        <img className="h-full w-full" src='https://github.com/GriDaniel/site-personal/blob/main/public/images/name-logol.png?raw=true'></img>
                     </div>
                     <div className="flex md:order-2 md:w-[1000px] w-[75px] items-center justify-end-reverse">
                         <button data-collapse-toggle="navbar-sticky" type="button" class="ml-[10px] inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:scale-[130%]" aria-controls="navbar-sticky" aria-expanded="false">

@@ -73,24 +73,24 @@ function Experience() {
 
                 >
                     <div className='mt-[100px] w-[650px] h-[400px]'>
-                        <img className='500:scale-[120%] 380:scale-[90%] scale-[70%] w-full h-full' src="public\images\exp-mockup.png" alt="" />
+                        <img className='500:scale-[120%] 380:scale-[90%] scale-[70%] w-full h-full' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/exp-mockup.png?raw=true" alt="" />
                     </div>
                     <div className='w-[269px] pb-[50px] md:pb-0 min-h-[100px] gap-5 flex flex-row items-center justify-center mt-[100px] '>
                         <a href='https://gridaniel.github.io/Ortobom-Quiz/' target='blank'>
                             <button className='dark:hover:shadow-darkMode-button hover:shadow-lightMode-button dark:bg-[#060B0B] bg-gray-300 dark:hover:bg-[#FAF8FF] button flex row items-center gap-3 font-satoshi text-[30px] dark:hover:text-black dark:text-[#DADDE2] text-black'>
                                 View
 
-                                <img className='w-[30px] h-[30px]' src="public\images\new-tab.png" alt="" />
+                                <img className='w-[30px] h-[30px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/new-tab.png?raw=true" alt="" />
 
                             </button>
                         </a>
 
                         <button className='dark:bg-[#060B0B] dark:hover:bg-white hover:shadow-lightMode-button bg-gray-300 dark:hover:shadow-darkMode-button button-two'>
                             <a href='https://github.com/GriDaniel/Ortobom-Landing-Website.git' target='blank' className='dark:block hidden'>
-                                <img className='w-[74px] h-[74px]' src="public\images\git-light.png" alt="" />
+                                <img className='w-[74px] h-[74px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/git-light.png?raw=true" alt="" />
                             </a>
                             <a href='https://github.com/GriDaniel/Ortobom-Landing-Website.git' target='blank' className='dark:hidden block'>
-                                <img className='w-[74px] h-[74px]' src="public\images\git-dark.png" alt="" />
+                                <img className='w-[74px] h-[74px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/git-dark.png?raw=true" alt="" />
                             </a>
 
                         </button>

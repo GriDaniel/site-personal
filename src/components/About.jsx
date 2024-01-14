@@ -115,16 +115,19 @@ const About = ({ darkMode }) => {
                             </p>
                             <div className='h-full w-[300px] flex md:flex-row md:justify-end mb-auto items-end mr-[50px] lg:mr-[100px]'>
                                 <a href='https://www.linkedin.com/in/dangoliveira/' target='blank' className='mr-[40px] dark:block hidden'>
-                                    <img id="myImage" className='hover:scale-105 sm:w-[100px] sm:h-[100px] w-[70px] h-[70px]' src="public\images\linked-light.png"  />
+                                    <img id="myImage" className='hover:scale-105 sm:w-[100px] sm:h-[100px] w-[70px] h-[70px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/linked-light.png?raw=true"  />
                                 </a>
                                 <a href='https://www.linkedin.com/in/dangoliveira/' target='blank' className='mr-[40px] dark:hidden dark'>
-                                    <img id="myImage" className='hover:scale-105 sm:w-[100px] sm:h-[100px] w-[70px] h-[70px]' src="public\images\linked-dark.png" />
+                                    <img id="myImage" className='hover:scale-105 sm:w-[100px] sm:h-[100px] w-[70px] h-[70px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/linked-dark.png?raw=true.png" />
                                 </a>
                                 <a href='https://github.com/GriDaniel' target='blank' className='dark:block hidden'>
-                                    <img className='hover:scale-105 sm:w-[100px] sm:h-[100px] w-[70px] h-[70px]' src="public\images\git-light.png" alt="" />
+                                    <img className='hover:scale-105 sm:w-[100px] sm:h-[100px] w-[70px] h-[70px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/git-light.png?raw=true" alt="" />
                                 </a>
                                 <a href='https://github.com/GriDaniel' target='blank' className='dark:hidden block'>
-                                    <img className='hover:scale-105 rounded-full sm:w-[100px] sm:h-[100px] w-[70px] h-[70px]' src="public\images\git-dark.png" alt="" />
+                                    <img className='hover:scale-105 rounded-full sm:w-[100px] sm:h-[100px] w-[70px] h-[70px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/git-dark
+                                    
+                                    
+                                    .png?raw=true" alt="" />
                                 </a>
                             </div>
                         </div>
