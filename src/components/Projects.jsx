@@ -127,7 +127,7 @@ function Projects() {
 
                 </motion.div>
 
-                <div className='w-full md:h-[800px] min-h-[800px] flex md:flex-row flex-col md:mt-[100px] mt-[40px] md:gap-[100px] gap-[0px] justify-center'>
+                <div className='w-full md:h-[800px] overflow-x-hidden overflow-hidden min-h-[800px] flex md:flex-row flex-col md:mt-[100px] mt-[40px] md:gap-[100px] gap-[0px] justify-center'>
 
 
 
