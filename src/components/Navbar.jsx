@@ -6,7 +6,7 @@ function Navbar({ darkMode, toggleDarkMode }) {
             <nav className="fixed w-screen flex justify-center  items-center z-20 top-0 left-0">
                 <div className="w-screen max:max-w-[1920px] lg:h-[80px] border-b-[3px] dark:border-[#0C171B] border-[#ACA9BB] dark:bg-black bg-[#FAF8FF] flex flex-row flex-wrap items-center justify-between px-4">
                     <div className='dark:block hidden w-[100px] h-full relative'>
-                        <img className="h-full w-full" src='https://github.com/GriDaniel/site-personal/blob/main/public/images/name-logo.png?raw=true'></img>
+                        <img className="h-full w-full" src='public\images\name-logo.png'></img>
                     </div>
                     <div className='block dark:hidden w-[100px] h-full relative'>
                         <img className="h-full w-full" src='https://github.com/GriDaniel/site-personal/blob/main/public/images/name-logol.png?raw=true'></img>
