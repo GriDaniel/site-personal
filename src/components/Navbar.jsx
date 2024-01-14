@@ -1,10 +1,10 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 
 function Navbar({ darkMode, toggleDarkMode }) {
-    const [isNavOpen, setNavOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const toggleNav = () => {
-      setNavOpen(!isNavOpen);
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
     };
     return (
         <>
@@ -17,8 +17,9 @@ function Navbar({ darkMode, toggleDarkMode }) {
                         <img className="h-full w-full" src='https://github.com/GriDaniel/site-personal/blob/main/public/images/personal-logol.png?raw=true'></img>
                     </div>
                     <div className="flex md:order-2 md:w-[1000px] w-[75px] items-center justify-end-reverse">
-                        <button data-collapse-toggle="navbar-sticky" type="button" class="ml-[10px] inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:scale-[130%]" aria-controls="navbar-sticky" aria-expanded={isNavOpen}
-          onClick={toggleNav}>
+                        <button data-collapse-toggle="navbar-sticky" type="button" className="ml-[10px] inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:scale-[130%]" aria-expanded={isMenuOpen}
+                            onTouchEnd={toggleMenu}
+                            onClick={toggleMenu}>
                             <span className="sr-only">Open main menu</span>
                             <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
@@ -107,7 +108,7 @@ function Navbar({ darkMode, toggleDarkMode }) {
 
 
                 </div>
-            </nav>
+            </nav >
 
 
         </>
