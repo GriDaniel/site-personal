@@ -186,7 +186,7 @@ function Projects() {
                         </div>
                     </div>
 
-                    <div ref={carousel2Ref} className="md:hidden flex h-[700px] w-[80%] mx-auto carousel overflow-x-hidden rounded-[50px]">
+                    <div ref={carousel2Ref} className="md:hidden flex h-[700px] w-[80%] mx-auto carousel rounded-[50px]">
 
                         <div className="md:hidden carousel-item w-full relative h-full flex justify-center">
                             <img className='w-full h-full object-cover' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/carousel-one.jpg?raw=true" />
