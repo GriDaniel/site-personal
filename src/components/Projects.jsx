@@ -198,9 +198,9 @@ function Projects() {
                         </div>
                     </div>
 
-                    <div ref={carousel2Ref} className="md:hidden h-[700px] w-[80%] mx-auto carousel rounded-[50px]">
+                    <div ref={carousel2Ref} className="md:hidden flex h-[700px] w-[80%] mx-auto carousel rounded-[50px]">
 
-                        <div className="carousel-item w-full relative h-full flex justify-center">
+                        <div className="md:hidden carousel-item w-full relative h-full flex justify-center">
                             <img className='w-full h-full object-cover' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/carousel-one.jpg?raw=true" />
 
                             <div className='absolute h-full w-full'>
@@ -213,13 +213,13 @@ function Projects() {
 
 
                         </div>
-                        <div className="carousel-item w-full h-full flex justify-center">
+                        <div className="md:hidden block carousel-item w-full h-full">
                             <img className='w-full  h-full object-cover' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/carousel-two.jpg?raw=true" />
 
 
 
                         </div>
-                        <div className="carousel-item w-full h-full flex justify-center">
+                        <div className="md:hidden block carousel-item w-full h-full">
                             <img className='w-full  h-full object-cover' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/carousel-three.jpg?raw=true" />
 
                         </div>
