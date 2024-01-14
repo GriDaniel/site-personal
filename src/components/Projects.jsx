@@ -299,7 +299,7 @@ function Projects() {
 
                     <motion.div ref={carouselImageRef} initial="hidden"
                         animate={inView ? 'visible' : 'hidden'}
-                        variants={animationVariants2} className="md:relative absolute md:flex hidden translate-y-[-20%] h-[700px] w-[900px] md:justify-normal justify-center carousel md:carousel-vertical flex-row md:rounded-[50px] mr-[100px]">
+                        variants={animationVariants2} className="md:relative absolute md:flex hidden translate-y-[-20%] h-[700px] md:w-[900px] w-0 md:justify-normal justify-center carousel md:carousel-vertical flex-row md:rounded-[50px] mr-[100px]">
                         <div className="carousel-item md:block hidden h-full">
                             <img className='w-full  h-full object-cover' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/carousel-one.jpg?raw=true" />
                             <div className="absolute left-[10%] top-[0%] scale-[200%] mouse_scroll mx-auto block w-[24px] lg:mt-[100px] mt-[50px]">
