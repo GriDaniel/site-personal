@@ -1,5 +1,5 @@
 {
-  "homepage": "https://GriDaniel.github.io/site-personal",
+  "homepage": "https://danoliveira.net",
   "name": "vite-project",
   "private": true,
   "version": "0.0.0",
@@ -10,7 +10,8 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "npm run gh-pages -d dist"
+    "set-git-config": "git config user.name 'GriDaniel' && git config user.email 'dan.grioliveira@gmail.com'",
+    "deploy": "npm run set-git-config && gh-pages -d dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
