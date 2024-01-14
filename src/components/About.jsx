@@ -86,7 +86,7 @@ const About = ({ darkMode }) => {
                     <div className='md:h-[250px] h-0 md:block hidden w-full '>
 
                     </div>
-                    <div className=' py-5 px-5 min-h-[500px] relative w-full md:mt-[100px] mt-0 flex flex-col justify-between'>
+                    <div className=' py-5 px-5 min-h-[500px] relative w-full md:mt-0  mt-[50px] flex flex-col justify-between'>
                         <p className='dark:text-[#DADDE2] text-black dark:bg-black bg-[#F4F4F4]  mb-auto lg:mr-[100px] md:mr-[50px] font-satoshi text-3xl'>
                             I am driven by innovation, aiming to merge computer engineering and web design to develop impactful projects. My focus lies in creating initiatives that address societal needs by harnessing technology for substantive and meaningful change. I am currently dedicated to building a platform or system aimed at simplifying the learning process for <br></br><div className='inline'><span className='font-extrabold relative '>
                                 <TypeAnimation
@@ -109,11 +109,11 @@ const About = ({ darkMode }) => {
                             </span>
                             </div>
                         </p>
-                        <div className='h-[300px] w-full flex mt-[50px] items-start md:flex-row flex-col'>
-                            <p className='dark:text-[#DADDE2] text-black md:mt-auto mt-[20px] mr-auto font-satoshi text-5xl font-bold italic'>
+                        <div className='h-[300px] w-full flex mb-[100px] mt-[100px] items-start md:flex-row flex-col md:gap-0 gap-[50px]'>
+                            <p className='dark:text-[#DADDE2] text-black mt-auto mr-auto font-satoshi text-5xl font-bold italic'>
                                 Passion is Key.
                             </p>
-                            <div className='h-full w-[300px] flex md:flex-row md:justify-end mb-auto items-end mr-[50px] lg:mr-[100px]'>
+                            <div className='h-[100px] w-[300px] flex md:flex-row md:justify-end mb-auto items-end mr-[50px] lg:mr-[100px]'>
                                 <a href='https://www.linkedin.com/in/dangoliveira/' target='blank' className='mr-[40px] dark:block hidden'>
                                     <img id="myImage" className='hover:scale-105 sm:w-[100px] sm:h-[100px] w-[70px] h-[70px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/linked-light.png?raw=true"  />
                                 </a>
@@ -129,9 +129,7 @@ const About = ({ darkMode }) => {
                             </div>
                         </div>
                     </div>
-                    <div className='h-[250px] w-full md:block hidden'>
-
-                    </div>
+                   
                 </motion.div>
 
 

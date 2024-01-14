@@ -33,7 +33,7 @@ function Experience() {
 
     return (
         <div id="experience" ref={ref} className='md:pb-[0px] pb-0 min-w-screen overflow-x-hidden overflow-hidden flex justify-center  dark:bg-black bg-[#F4F4F4]'>
-            <div className='max:w-[1920px] md:mt-[80px] mt-[75px] w-screen min-h-[950px] dark:bg-black bg-[#F4F4F4] flex items-center justify-center md:flex-row flex-col'>
+            <div className='max:w-[1920px] md:mt-[80px] mt-[0px] w-screen min-h-[950px] dark:bg-black bg-[#F4F4F4] flex items-center justify-center md:flex-row flex-col'>
                 <motion.div
 
                     initial="hidden"
@@ -41,7 +41,7 @@ function Experience() {
                     variants={animationVariants}
                     className='min-h-[800px] md:w-[50%]  w-[80%] flex-col flex md:justify-start md:items-start justify-end'
                 >
-                    <h1 className='dark:text-[#DADDE2] h1-special text-black md:ml-[20px] md:mt-0 mt-[100px] lg:ml-[100px] sm:text-8xl text-7xl font-satoshi font-bold'>Experience</h1>
+                    <h1 className='dark:text-[#DADDE2] h1-special text-black md:ml-[20px] md:mt-0 mt-[50px] lg:ml-[100px] sm:text-8xl text-7xl font-satoshi font-bold'>Experience</h1>
                     <h2 className='dark:text-[#DADDE2] min-h-[70px] text-black md:ml-[20px] mt-[100px] lg:ml-[100px] text-5xl italic font-extralight'>Front-end developer at Cybercash</h2>
                     <span className="bg-blue-100  text-blue-800 md:ml-[20px] font-satoshi text-2xl mt-[20px] lg:ml-[100px] font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400">June 2023 – August 2023
                     </span>

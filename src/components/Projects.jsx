@@ -1,45 +1,37 @@
-import React, { useRef, useEffect, Component } from 'react'
+import React, { useRef, useEffect, useState, Component } from 'react'
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 
 
 function Projects() {
-
-
-
-    const carousel1Ref = useRef(null);
-    const carousel2Ref = useRef(null);
+    const imageCarouselRef = useRef(null);
+    const textCarouselRef = useRef(null);
+   
 
     useEffect(() => {
-        const handleScroll = (scrollingCarousel, targetCarousel) => {
-            const scrollRatio = scrollingCarousel.scrollLeft / (scrollingCarousel.scrollWidth - scrollingCarousel.clientWidth);
-            targetCarousel.scrollLeft = scrollRatio * (targetCarousel.scrollWidth - targetCarousel.clientWidth);
+        const imageCarousel = imageCarouselRef.current;
+        const textCarousel = textCarouselRef.current;
+
+        const handleScroll = () => {
+            window.requestAnimationFrame(() => {
+                
+                const scrollRatio = imageCarousel.scrollLeft / (imageCarousel.scrollWidth - imageCarousel.clientWidth);
+
+                
+                textCarousel.scrollLeft = scrollRatio * (textCarousel.scrollWidth - textCarousel.clientWidth);
+            });
         };
 
-        const syncCarousels = (sourceCarousel, targetCarousel) => {
-            const handleCarouselScroll = () => {
-                handleScroll(sourceCarousel.current, targetCarousel.current);
-            };
-
-            sourceCarousel.current.addEventListener('scroll', handleCarouselScroll);
-
-            return () => {
-                sourceCarousel.current.removeEventListener('scroll', handleCarouselScroll);
-            };
-        };
-
-        const cleanup1 = syncCarousels(carousel1Ref, carousel2Ref);
-        const cleanup2 = syncCarousels(carousel2Ref, carousel1Ref);
+        imageCarousel.addEventListener('scroll', handleScroll);
 
         return () => {
-            cleanup1();
-            cleanup2();
+            imageCarousel.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
-    const carouselImageRef = useRef(null); // Reference to the scrollable carousel with images
-    const carouselTextRef = useRef(null); // Reference to the non-scrollable carousel with text
+    const carouselImageRef = useRef(null); 
+    const carouselTextRef = useRef(null); 
 
     useEffect(() => {
         const carouselImage = carouselImageRef.current;
@@ -47,10 +39,10 @@ function Projects() {
 
         const handleScroll = () => {
             window.requestAnimationFrame(() => {
-                // Calculate the proportion of the image carousel that has been scrolled
+                
                 const scrollRatio = carouselImage.scrollTop / (carouselImage.scrollHeight - carouselImage.clientHeight);
 
-                // Apply this proportion to the text carousel
+         
                 carouselText.scrollTop = scrollRatio * (carouselText.scrollHeight - carouselText.clientHeight);
             });
         };
@@ -114,7 +106,7 @@ function Projects() {
 
 
 
-                    <div ref={carousel1Ref} className="mt-[100px] pointer-events-none md:hidden min-h-[550px] carousel rounded-box">
+                    <div ref={textCarouselRef} className="mt-[100px] pointer-events-none md:hidden min-h-[550px] carousel rounded-box">
                         <div className="border-b-transparent carousel-item h-full w-screen flex items-center flex-col dark:bg-black bg-[#F4F4F4]">
                             <div className='w-[80%] flex items-center justify-between'>
                                 <h1 className='font-satoshi text-[60px] dark:text-[#DADDE2] text-black'>Novus Car</h1>
@@ -131,7 +123,7 @@ function Projects() {
                                 <button className='pointer-events-auto dark:hover:shadow-darkMode-button hover:shadow-lightMode-button dark:bg-[#060B0B] bg-gray-300 dark:hover:bg-[#FAF8FF] button flex row items-center gap-3 font-satoshi text-[30px] dark:hover:text-black dark:text-[#DADDE2] text-black'>
                                     Learn More
 
-                                    <img  loading="lazy" className='w-[30px] h-[30px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/new-tab.png?raw=true" alt="" />
+                                    <img loading="lazy" className='w-[30px] h-[30px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/new-tab.png?raw=true" alt="" />
 
                                 </button>
                             </a>
@@ -152,7 +144,7 @@ function Projects() {
                                 <button className='pointer-events-auto dark:hover:shadow-darkMode-button hover:shadow-lightMode-button dark:bg-[#060B0B] bg-gray-300 dark:hover:bg-[#FAF8FF] button flex row items-center gap-3 font-satoshi text-[30px] dark:hover:text-black dark:text-[#DADDE2] text-black'>
                                     Learn More
 
-                                    <img  loading="lazy" className='w-[30px] h-[30px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/new-tab.png?raw=true" alt="" />
+                                    <img loading="lazy" className='w-[30px] h-[30px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/new-tab.png?raw=true" alt="" />
 
                                 </button>
                             </a>
@@ -174,20 +166,20 @@ function Projects() {
                                 <button className='pointer-events-auto dark:hover:shadow-darkMode-button hover:shadow-lightMode-button dark:bg-[#060B0B] bg-gray-300 dark:hover:bg-[#FAF8FF] button flex row items-center gap-3 font-satoshi text-[30px] dark:hover:text-black dark:text-[#DADDE2] text-black'>
                                     Learn More
 
-                                    <img  loading="lazy" className='w-[30px] h-[30px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/new-tab.png?raw=true" alt="" />
+                                    <img loading="lazy" className='w-[30px] h-[30px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/new-tab.png?raw=true" alt="" />
 
                                 </button>
                             </a>
                         </div>
                     </div>
 
-                    <div ref={carousel2Ref} className="md:hidden flex h-[700px] w-[80%] mx-auto carousel rounded-[50px]">
+                    <div ref={imageCarouselRef} className="md:hidden flex h-[700px] w-[80%] mx-auto carousel rounded-[50px]">
 
                         <div className="md:hidden carousel-item w-full relative h-full flex justify-center">
-                            <img  loading="lazy" className='w-full h-full object-cover' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/carousel-one.jpg?raw=true" />
+                            <img loading="lazy" className='w-full h-full object-cover' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/carousel-one.jpg?raw=true" />
 
                             <div className='absolute h-full w-full'>
-                                <img  loading="lazy" className='relative w-[150px] h-[150px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/swipe-indicator.png?raw=true" alt="" />
+                                <img loading="lazy" className='relative w-[150px] h-[150px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/swipe-indicator.png?raw=true" alt="" />
                             </div>
 
 
@@ -197,13 +189,13 @@ function Projects() {
 
                         </div>
                         <div className="md:hidden block carousel-item w-full h-full">
-                            <img  loading="lazy" className='w-full  h-full object-cover' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/carousel-two.jpg?raw=true" />
+                            <img loading="lazy" className='w-full  h-full object-cover' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/carousel-two.jpg?raw=true" />
 
 
 
                         </div>
                         <div className="md:hidden block carousel-item w-full h-full">
-                            <img  loading="lazy" className='w-full  h-full object-cover' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/carousel-three.jpg?raw=true" />
+                            <img loading="lazy" className='w-full  h-full object-cover' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/carousel-three.jpg?raw=true" />
 
                         </div>
                     </div>
@@ -227,7 +219,7 @@ function Projects() {
                                 <button className='pointer-events-auto dark:hover:shadow-darkMode-button hover:shadow-lightMode-button dark:bg-[#060B0B] bg-gray-300 dark:hover:bg-[#FAF8FF] button flex row items-center gap-3 font-satoshi text-[30px] dark:hover:text-black dark:text-[#DADDE2] text-black'>
                                     Learn More
 
-                                    <img  loading="lazy"  className='w-[30px] h-[30px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/new-tab.png?raw=true" alt="" />
+                                    <img loading="lazy" className='w-[30px] h-[30px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/new-tab.png?raw=true" alt="" />
 
                                 </button>
                             </a>
@@ -248,7 +240,7 @@ function Projects() {
                                 <button className='pointer-events-auto dark:hover:shadow-darkMode-button hover:shadow-lightMode-button dark:bg-[#060B0B] bg-gray-300 dark:hover:bg-[#FAF8FF] button flex row items-center gap-3 font-satoshi text-[30px] dark:hover:text-black dark:text-[#DADDE2] text-black'>
                                     Learn More
 
-                                    <img  loading="lazy" className='w-[30px] h-[30px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/new-tab.png?raw=true" alt="" />
+                                    <img loading="lazy" className='w-[30px] h-[30px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/new-tab.png?raw=true" alt="" />
 
                                 </button>
                             </a>
@@ -270,7 +262,7 @@ function Projects() {
                                 <button className='pointer-events-auto dark:hover:shadow-darkMode-button hover:shadow-lightMode-button dark:bg-[#060B0B] bg-gray-300 dark:hover:bg-[#FAF8FF] button flex row items-center gap-3 font-satoshi text-[30px] dark:hover:text-black dark:text-[#DADDE2] text-black'>
                                     Learn More
 
-                                    <img  loading="lazy" className='w-[30px] h-[30px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/new-tab.png?raw=true" alt="" />
+                                    <img loading="lazy" className='w-[30px] h-[30px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/new-tab.png?raw=true" alt="" />
 
                                 </button>
                             </a>
@@ -284,7 +276,7 @@ function Projects() {
                         animate={inView ? 'visible' : 'hidden'}
                         variants={animationVariants2} className="md:relative absolute md:flex hidden translate-y-[-20%] h-[700px] md:w-[900px] w-0 md:justify-normal justify-center carousel md:carousel-vertical flex-row md:rounded-[50px] mr-[100px]">
                         <div className="carousel-item md:block hidden h-full">
-                            <img  loading="lazy"  className='w-full  h-full object-cover' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/carousel-one.jpg?raw=true" />
+                            <img loading="lazy" className='w-full  h-full object-cover' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/carousel-one.jpg?raw=true" />
                             <div className="absolute left-[10%] top-[0%] scale-[200%] mouse_scroll mx-auto block w-[24px] lg:mt-[100px] mt-[50px]">
                                 <div className="mouse mt dark:bg-transparent bg-black border-2 dark:border-white border-[#303030]">
                                     <div className="wheel"></div>
@@ -299,13 +291,13 @@ function Projects() {
 
                         </div>
                         <div className="md:block hidden carousel-item h-full">
-                            <img  loading="lazy"  className='w-full  h-full object-cover' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/carousel-two.jpg?raw=true" />
+                            <img loading="lazy" className='w-full  h-full object-cover' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/carousel-two.jpg?raw=true" />
 
 
 
                         </div>
                         <div className="md:block hidden carousel-item h-full">
-                            <img  loading="lazy" className='w-full  h-full object-cover' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/carousel-three.jpg?raw=true" />
+                            <img loading="lazy" className='w-full  h-full object-cover' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/carousel-three.jpg?raw=true" />
 
                         </div>
 
