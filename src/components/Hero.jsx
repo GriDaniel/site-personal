@@ -70,14 +70,14 @@ function Hero() {
                         </motion.div>
                     </motion.div>
 
-                    <img src="https://github.com/GriDaniel/site-personal/blob/main/public/images/dark.jpg?raw=true" alt="" className="dark:visible invisible absolute h-full w-screen animate-left-first object-cover  bg-black opacity-[0.05]" />
+                    <img  loading="lazy" src="https://github.com/GriDaniel/site-personal/blob/main/public/images/dark.jpg?raw=true" alt="" className="dark:visible invisible absolute h-full w-screen animate-left-first object-cover  bg-black opacity-[0.05]" />
 
-                    <img src="https://github.com/GriDaniel/site-personal/blob/main/public/images/darkf.jpg?raw=true" alt="" className=" 
+                    <img  loading="lazy" src="https://github.com/GriDaniel/site-personal/blob/main/public/images/darkf.jpg?raw=true" alt="" className=" 
   dark:visible invisible h-full w-screen  absolute object-cover animate-left-second bg-black opacity-[0.05]" />
 
-                    <img src="https://github.com/GriDaniel/site-personal/blob/main/public/images/light.jpg?raw=true" alt="" className="dark:invisible visible absolute h-full w-screen animate-left-first object-cover  bg-[#F4F4F4] opacity-[0.80]" />
+                    <img  loading="lazy" src="https://github.com/GriDaniel/site-personal/blob/main/public/images/light.jpg?raw=true" alt="" className="dark:invisible visible absolute h-full w-screen animate-left-first object-cover  bg-[#F4F4F4] opacity-[0.80]" />
 
-                    <img src="https://github.com/GriDaniel/site-personal/blob/main/public/images/lightf.jpg?raw=true" alt="" className=" 
+                    <img  loading="lazy" src="https://github.com/GriDaniel/site-personal/blob/main/public/images/lightf.jpg?raw=true" alt="" className=" 
 dark:invisible visible h-full w-screen  absolute object-cover animate-left-second bg-[#F4F4F4] opacity-[0.80]" />
                     
 
