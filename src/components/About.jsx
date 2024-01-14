@@ -124,10 +124,7 @@ const About = ({ darkMode }) => {
                                     <img className='hover:scale-105 sm:w-[100px] sm:h-[100px] w-[70px] h-[70px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/git-light.png?raw=true" alt="" />
                                 </a>
                                 <a href='https://github.com/GriDaniel' target='blank' className='dark:hidden block'>
-                                    <img className='hover:scale-105 rounded-full sm:w-[100px] sm:h-[100px] w-[70px] h-[70px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/git-dark
-                                    
-                                    
-                                    .png?raw=true" alt="" />
+                                    <img className='hover:scale-105 rounded-full sm:w-[100px] sm:h-[100px] w-[70px] h-[70px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/git-dark.png?raw=true" alt="" />
                                 </a>
                             </div>
                         </div>

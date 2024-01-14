@@ -204,7 +204,7 @@ function Projects() {
                             <img className='w-full h-full object-cover' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/carousel-one.jpg?raw=true" />
 
                             <div className='absolute h-full w-full'>
-                                <img className='relative w-[150px] h-[150px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/swiper-indicator.png?raw=true" alt="" />
+                                <img className='relative w-[150px] h-[150px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/swipe-indicator.png?raw=true" alt="" />
                             </div>
 
 
@@ -244,7 +244,7 @@ function Projects() {
                                 <button className='pointer-events-auto dark:hover:shadow-darkMode-button hover:shadow-lightMode-button dark:bg-[#060B0B] bg-gray-300 dark:hover:bg-[#FAF8FF] button flex row items-center gap-3 font-satoshi text-[30px] dark:hover:text-black dark:text-[#DADDE2] text-black'>
                                     Learn More
 
-                                    <img className='w-[30px] h-[30px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/new-tab.png.png?raw=true" alt="" />
+                                    <img className='w-[30px] h-[30px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/new-tab.png?raw=true" alt="" />
 
                                 </button>
                             </a>
