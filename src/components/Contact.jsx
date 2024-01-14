@@ -3,7 +3,7 @@ import React from 'react'
 function Contact() {
     return (
         <div className='min-w-screen overflow-x-hidden overflow-hidden flex justify-center items-center dark:bg-black bg-[#F4F4F4]'>
-            <div className='pt-[200px] pb-[25px] min-w-screen min-h-[300px] overflow-x-hidden overflow-hidden flex dark:bg-black flex-col bg-[#F4F4F4]'>
+            <div className='pt-[50px] pb-[25px] min-w-screen min-h-[300px] overflow-x-hidden overflow-hidden flex dark:bg-black flex-col bg-[#F4F4F4]'>
                 <div className='h-[200px] w-full  flex items-start justify-center'>
                     <h1 id="contact" className='dark:text-white text-black font-satoshi text-5xl'>Stay in touch.</h1>
 

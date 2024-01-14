@@ -43,37 +43,25 @@ function Projects() {
         };
     }, []);
 
-
     const carouselImageRef = useRef(null); // Reference to the scrollable carousel with images
     const carouselTextRef = useRef(null); // Reference to the non-scrollable carousel with text
-
+    
     useEffect(() => {
         const carouselImage = carouselImageRef.current;
         const carouselText = carouselTextRef.current;
-        let lastKnownScrollPosition = 0;
-        let ticking = false;
-
-        const syncScroll = () => {
-            const imageScrollPosition = carouselImage.scrollTop;
-            // Assuming each image and text block have the same height
-            carouselText.scrollTop = imageScrollPosition;
-        };
-
+    
         const handleScroll = () => {
-            lastKnownScrollPosition = carouselImage.scrollTop;
-
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    syncScroll(lastKnownScrollPosition);
-                    ticking = false;
-                });
-
-                ticking = true;
-            }
+            window.requestAnimationFrame(() => {
+                // Calculate the proportion of the image carousel that has been scrolled
+                const scrollRatio = carouselImage.scrollTop / (carouselImage.scrollHeight - carouselImage.clientHeight);
+    
+                // Apply this proportion to the text carousel
+                carouselText.scrollTop = scrollRatio * (carouselText.scrollHeight - carouselText.clientHeight);
+            });
         };
-
+    
         carouselImage.addEventListener('scroll', handleScroll);
-
+    
         return () => {
             carouselImage.removeEventListener('scroll', handleScroll);
         };
@@ -127,7 +115,7 @@ function Projects() {
 
                 </motion.div>
 
-                <div className='w-full md:h-[800px] overflow-x-hidden overflow-hidden min-h-[800px] flex md:flex-row flex-col md:mt-[100px] mt-[40px] md:gap-[100px] gap-[0px] justify-center'>
+                <div className='w-full md:h-[1000px]  overflow-x-hidden overflow-hidden min-h-[800px] flex md:flex-row flex-col md:mt-[100px] mt-[40px] md:gap-[100px] gap-[0px] justify-center'>
 
 
 
@@ -198,7 +186,7 @@ function Projects() {
                         </div>
                     </div>
 
-                    <div ref={carousel2Ref} className="md:hidden flex h-[700px] w-[80%] mx-auto carousel rounded-[50px]">
+                    <div ref={carousel2Ref} className="md:hidden flex h-[700px] w-[80%] mx-auto carousel overflow-x-hidden rounded-[50px]">
 
                         <div className="md:hidden carousel-item w-full relative h-full flex justify-center">
                             <img className='w-full h-full object-cover' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/carousel-one.jpg?raw=true" />
@@ -225,7 +213,7 @@ function Projects() {
                         </div>
                     </div>
 
-                    <motion.div className="pointer-events-none md:flex md:relative absolute hidden shadow-none min-h-[800px] w-[700px] carousel md:carousel-vertical flex-row overflow-x-scroll snap-x rounded-lg mr-auto lg:ml-[100px] md:ml-[20px]" ref={carouselTextRef} initial="hidden"
+                    <motion.div className="pointer-events-none md:flex md:relative absolute hidden shadow-none min-h-[800px] md:w-[700px]  w-0 carousel md:carousel-vertical flex-row overflow-x-scroll snap-x rounded-lg mr-auto lg:ml-[100px] md:ml-[20px]" ref={carouselTextRef} initial="hidden"
                         animate={inView ? 'visible' : 'hidden'}
                         variants={animationVariants} >
                         <div className="carousel-item h-full md:flex hidden flex-col dark:bg-black bg-[#F4F4F4]">
