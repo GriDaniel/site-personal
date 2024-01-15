@@ -161,7 +161,7 @@ function Projects() {
                         </motion.div>
 
                         <motion.div animate={inView ? 'visible' : 'hidden'}
-                        variants={animationVariants5} ref={textCarouselRef} className="mt-[100px] pointer-events-none md:hidden min-h-[550px] carousel rounded-box">
+                        variants={animationVariants5} ref={textCarouselRef} className="mt-[100px] md:pb-0 pb-[100px] pointer-events-none md:hidden min-h-[550px] carousel rounded-box">
                             <div className="border-b-transparent carousel-item h-full w-screen flex items-center flex-col dark:bg-black bg-[#F4F4F4]">
                                 <div className='w-[80%] flex items-center justify-between'>
                                     <h1 className='font-satoshi text-[60px] dark:text-[#DADDE2] text-black'>Novus Car</h1>
