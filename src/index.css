@@ -14,7 +14,6 @@
 }
 
 
-
 html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
@@ -348,8 +347,8 @@ html {
 .button-two:hover {
   background: #5ab9ea;
   color: #050801;
-  
- 
+
+
 
 
 

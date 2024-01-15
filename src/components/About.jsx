@@ -109,7 +109,7 @@ const About = ({ darkMode }) => {
                             </span>
                             </div>
                         </p>
-                        <div className='h-[300px] w-full flex mb-[100px] mt-[100px] items-start md:flex-row flex-col md:gap-0 gap-[50px]'>
+                        <div className='h-[300px] w-full flex md:mb-[100px] mb-0 mt-[100px] items-start md:flex-row flex-col md:gap-0 gap-[50px]'>
                             <p className='dark:text-[#DADDE2] text-black mt-auto mr-auto font-satoshi text-5xl font-bold italic'>
                                 Passion is Key.
                             </p>

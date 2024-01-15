@@ -32,7 +32,7 @@ function Experience() {
 
 
     return (
-        <div id="experience" ref={ref} className='md:pb-[0px] pb-0 min-w-screen overflow-x-hidden overflow-hidden flex justify-center  dark:bg-black bg-[#F4F4F4]'>
+        <div id="experience" ref={ref} className='md:pb-[0px] md:pt-0 pt-[100px] pb-0 min-w-screen overflow-x-hidden overflow-hidden flex justify-center  dark:bg-black bg-[#F4F4F4]'>
             <div className='max:w-[1920px] md:mt-[80px] mt-[0px] w-screen min-h-[950px] dark:bg-black bg-[#F4F4F4] flex items-center justify-center md:flex-row flex-col'>
                 <motion.div
 
