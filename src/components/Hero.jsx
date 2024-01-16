@@ -10,10 +10,6 @@ import anime from 'animejs';
 
 
 function Hero() {
-    const containerVariants = {
-        hidden: { y: '-100vh' },
-        visible: { y: 0 },
-    };
 
 
     return (
@@ -32,25 +28,12 @@ function Hero() {
                     >
                         Daniel Oliveira
                         <motion.div
-                            initial={{ opacity: 0, y: 1000 }} // Initial hidden state for the typed animation
-                            animate={{ opacity: 1, y: 0 }} // Animation to make it visible
-                            transition={{ duration: 1, delay: 0.5 }} // Animation transition
+                            initial={{ opacity: 0, y: 1000 }} 
+                            animate={{ opacity: 1, y: 0 }} 
+                            transition={{ duration: 1, delay: 0.5 }} 
                             className='text h-[5%] capitalize font-satoshiL dark:text-[#DADDE2] text-[#303030] container-special-two'
                         >
 
-                            {/* <TypeAnimation
-                                sequence={[
-                                    '',
-                                    1550,
-                                    'level II computer engineering student',
-                                    1250,
-                                    'front-end developer',
-                                    2500,
-                                ]}
-                                wrapper="span"
-                                speed={90}
-                                repeat={Infinity}
-                            /> */}
 
                         </motion.div>
                         <motion.div
