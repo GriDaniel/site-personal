@@ -3,15 +3,15 @@ import React from 'react'
 function Contact() {
     return (
         <div id="contact" className='min-w-screen overflow-x-hidden overflow-hidden flex justify-center items-center dark:bg-black bg-[#F4F4F4]'>
-            <div className='md:pt-[50px] pt-[100px] pb-[25px] min-w-screen min-h-[300px] overflow-x-hidden overflow-hidden flex dark:bg-black flex-col bg-[#F4F4F4]'>
-                <div className='h-[200px] w-full  flex items-start justify-center'>
-                    <h1 className='dark:text-white text-black font-satoshi text-5xl'>Stay in touch.</h1>
+            <div className='pb-[25px] min-w-screen min-h-[300px] overflow-x-hidden overflow-hidden flex dark:bg-black flex-col items-center bg-[#F4F4F4]'>
+                <div className='pt-[100px] md:pb-0 pb-[100px] min-h-auto w-[50%] flex items-start justify-center'>
+                    <h1 className='dark:text-white text-black font-satoshi text-4xl'>Stay in touch</h1>
 
                 </div>
                 <div className='max:w-[1920px]  w-screen min-h-[250px]  flex items-center justify-center md:flex-row flex-col'>
                     <div className='md:w-[50%]  w-[85%] h-full flex justify-center items-center'>
                         <div className='min-h-[80%] md:w-[220px] w-full dark:text-white text-black'>
-                            <p className='font-satoshi text-xl'>Thank you for visiting my website. <br /><br /> Feel free to reach out — dan.grioliveira@gmail.com</p>
+                            <p className='font-satoshi text-xl md:text-left text-center'>Thank you for visiting my website. <br /><br /> Feel free to reach out — dan.grioliveira@gmail.com</p>
 
                         </div>
                     </div>

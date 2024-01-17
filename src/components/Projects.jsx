@@ -117,21 +117,21 @@ function Projects() {
     };
     const isMobileScreen = useMediaQuery({ maxWidth: 768 });
     return (
-        <div id="projects" ref={ref} className='min-w-screen overflow-x-hidden overflow-hidden flex justify-center items-center dark:bg-black bg-[#F4F4F4]'>
+        <div id="projects" ref={ref} className='md:pb-[200px] pb-0 min-w-screen overflow-x-hidden overflow-hidden flex justify-center items-center dark:bg-black bg-[#F4F4F4]'>
             <div className='max:w-[1920px] w-screen dark:bg-black bg-[#F4F4F4] flex justify-center flex-col'>
                 <motion.div initial="hidden"
                     animate={inView ? 'visible' : 'hidden'}
-                    variants={animationVariants3} className='w-full h-[100px] md:mt-[120px] mt-[50px] flex md:justify-normal justify-center'>
+                    variants={animationVariants3} className='w-full min-h-[100px] flex md:justify-normal justify-center'>
 
-                    <h1 className='md:ml-[20px] lg:ml-[100px] w-[80%] dark:text-[#DADDE2] h1-special text-black  md:mt-0 mt-[100px] sm:text-8xl text-7xl font-satoshi font-bold'>Projects</h1>
+                    <h1 className='md:ml-[20px] lg:ml-[100px] w-[80%] dark:text-[#DADDE2] h1-special text-black sm:text-8xl text-7xl font-satoshi font-bold'>Projects</h1>
 
 
                 </motion.div>
 
-                <div className='w-full md:h-[1000px]  overflow-x-hidden overflow-hidden min-h-[800px] flex md:flex-row flex-col md:mt-[100px] mt-[40px] md:gap-[100px] gap-[0px] justify-center'>
+                <div className='w-full md:h-[600px]  overflow-x-hidden overflow-hidden flex md:flex-row flex-col mt-[100px] md:gap-[100px] gap-[0px] justify-center'>
                     <div className='md:hidden flex flex-col md:absolute h-full w-full'>
                         <motion.div animate={inView ? 'visible' : 'hidden'}
-                        variants={animationVariants4} ref={imageCarouselRef} className="md:hidden flex h-[500px] mt-[100px] w-[80%] mx-auto carousel rounded-[50px]">
+                        variants={animationVariants4} ref={imageCarouselRef} className="md:hidden flex h-[500px] w-[80%] mx-auto carousel rounded-[50px]">
 
 
 
@@ -161,20 +161,20 @@ function Projects() {
                         </motion.div>
 
                         <motion.div animate={inView ? 'visible' : 'hidden'}
-                        variants={animationVariants5} ref={textCarouselRef} className="mt-[100px] md:pb-0 pb-[100px] pointer-events-none md:hidden min-h-[550px] carousel rounded-box">
+                        variants={animationVariants5} ref={textCarouselRef} className="mt-[40px] md:pb-0 pb-[100px] pointer-events-none md:hidden min-h-[550px] carousel rounded-box">
                             <div className="border-b-transparent carousel-item h-full w-screen flex items-center flex-col dark:bg-black bg-[#F4F4F4]">
                                 <div className='w-[80%] flex items-center justify-between'>
-                                    <h1 className='font-satoshi text-[60px] dark:text-[#DADDE2] text-black'>Novus Car</h1>
+                                    <h1 className='font-satoshi text-6xl dark:text-[#DADDE2] text-black'>Novus Car</h1>
 
                                 </div>
 
-                                <div className='text-black w-[80%] dark:text-[#DADDE2] font-satoshi italic text-3xl'>
+                                <div className='text-black w-[80%] mt-[10px] dark:text-[#DADDE2] font-satoshi italic text-3xl'>
                                     McMaster Engineering Competition (November, 2023)
                                 </div>
-                                <p className='w-[80%] text-black dark:text-[#DADDE2] mt-[65px] text-3xl'>
+                                <p className='w-[80%] text-black dark:text-[#DADDE2] mt-[40px] text-3xl'>
                                     1st place winners, devising programming solutions to enhance the features and preformance of autonomous vehicles.
                                 </p>
-                                <a className='mt-[100px] mx-auto ' href='https://github.com/Swwwerve/NovusCar' target='blank'>
+                                <a className='mt-[40px] mx-auto ' href='https://github.com/Swwwerve/NovusCar' target='blank'>
                                     <button className='pointer-events-auto dark:hover:shadow-darkMode-button hover:shadow-lightMode-button dark:bg-[#060B0B] bg-gray-300 dark:hover:bg-[#FAF8FF] button flex row items-center gap-3 font-satoshi text-[30px] dark:hover:text-black dark:text-[#DADDE2] text-black'>
                                         Learn More
 
@@ -185,17 +185,17 @@ function Projects() {
                             </div>
                             <div className="carousel-item h-full w-screen flex items-center flex-col dark:bg-black bg-[#F4F4F4]">
                                 <div className='w-[80%] flex items-center justify-between'>
-                                    <h1 className='font-satoshi text-[60px] dark:text-[#DADDE2] text-black'>Nasa Squad</h1>
+                                    <h1 className='font-satoshi text-6xl dark:text-[#DADDE2] text-black'>Nasa Squad</h1>
 
                                 </div>
 
                                 <div className='w-[80%] text-black dark:text-[#DADDE2] font-satoshi italic text-3xl'>
                                     NASA Space Apps Challenge (October, 2023)
                                 </div>
-                                <p className='w-[80%] text-black dark:text-[#DADDE2] mt-[65px] text-3xl'>
+                                <p className='w-[80%] text-black dark:text-[#DADDE2] mt-[40px] text-3xl'>
                                     Competed by using machine learning to train a model that extracts vital data from extensive space biology datasets, aiding in determining the impact of space travel on human bone health.
                                 </p>
-                                <a className='mt-[100px] mx-auto ' href='https://github.com/Achen2804/NasaTime' target='blank'>
+                                <a className='mt-[40px] mx-auto ' href='https://github.com/Achen2804/NasaTime' target='blank'>
                                     <button className='pointer-events-auto dark:hover:shadow-darkMode-button hover:shadow-lightMode-button dark:bg-[#060B0B] bg-gray-300 dark:hover:bg-[#FAF8FF] button flex row items-center gap-3 font-satoshi text-[30px] dark:hover:text-black dark:text-[#DADDE2] text-black'>
                                         Learn More
 
@@ -206,18 +206,18 @@ function Projects() {
                             </div>
                             <div className="carousel-item h-full w-screen flex items-center flex-col dark:bg-black bg-[#F4F4F4]">
                                 <div className='w-[80%] flex items-center justify-between'>
-                                    <h1 className='h1-special font-satoshi text-[60px] dark:text-[#DADDE2] text-black'>CAD Designathon</h1>
+                                    <h1 className='h1-special font-satoshi text-6xl dark:text-[#DADDE2] text-black'>CAD Designathon</h1>
 
                                 </div>
 
                                 <div className='w-[80%] text-black dark:text-[#DADDE2] font-satoshi italic text-3xl'>
 
                                 </div>
-                                <p className='w-[80%] text-black dark:text-[#DADDE2] mt-[65px] text-3xl'>
+                                <p className='w-[80%] text-black dark:text-[#DADDE2] mt-[40px] text-3xl'>
                                     Challenged other designers by designing a non-motorized mechanical system to protect electrical
                                     connectors from debris in space using AutoDesk Inventor.
                                 </p>
-                                <a className='mt-[100px] mx-auto ' href='https://drive.google.com/drive/folders/1yRbgQakXEV3RKcN3VuTO3bHrm6SJnn3d?usp=sharing' target='blank'>
+                                <a className='mt-[40px] mx-auto ' href='https://drive.google.com/drive/folders/1yRbgQakXEV3RKcN3VuTO3bHrm6SJnn3d?usp=sharing' target='blank'>
                                     <button className='pointer-events-auto dark:hover:shadow-darkMode-button hover:shadow-lightMode-button dark:bg-[#060B0B] bg-gray-300 dark:hover:bg-[#FAF8FF] button flex row items-center gap-3 font-satoshi text-[30px] dark:hover:text-black dark:text-[#DADDE2] text-black'>
                                         Learn More
 
@@ -234,17 +234,17 @@ function Projects() {
                         variants={animationVariants} >
                         <div className="carousel-item h-full md:flex hidden flex-col dark:bg-black bg-[#F4F4F4]">
                             <div className='w-full flex items-center justify-between'>
-                                <h1 className='font-satoshi text-[60px] dark:text-[#DADDE2] text-black'>Novus Car</h1>
+                                <h1 className='font-satoshi text-6xl dark:text-[#DADDE2] text-black'>Novus Car</h1>
 
                             </div>
 
                             <div className='text-black dark:text-[#DADDE2] font-satoshi italic text-3xl'>
                                 McMaster Engineering Competition (November, 2023)
                             </div>
-                            <p className='text-black dark:text-[#DADDE2] mt-[65px] text-3xl'>
+                            <p className='text-black dark:text-[#DADDE2] mt-[40px] text-3xl'>
                                 1st place winners, devising programming solutions to enhance the features and preformance of autonomous vehicles.
                             </p>
-                            <a className='mt-[100px] h-full mx-auto ' href='https://github.com/Swwwerve/NovusCar' target='blank'>
+                            <a className='mt-[40px] h-full mx-auto ' href='https://github.com/Swwwerve/NovusCar' target='blank'>
                                 <button className='pointer-events-auto dark:hover:shadow-darkMode-button hover:shadow-lightMode-button dark:bg-[#060B0B] bg-gray-300 dark:hover:bg-[#FAF8FF] button flex row items-center gap-3 font-satoshi text-[30px] dark:hover:text-black dark:text-[#DADDE2] text-black'>
                                     Learn More
 
@@ -255,17 +255,17 @@ function Projects() {
                         </div>
                         <div className="carousel-item h-full md:flex hidden flex-col dark:bg-black bg-[#F4F4F4]">
                             <div className='w-full flex items-center justify-between'>
-                                <h1 className='font-satoshi text-[60px] dark:text-[#DADDE2] text-black'>Nasa Squad</h1>
+                                <h1 className='font-satoshi text-6xl dark:text-[#DADDE2] text-black'>Nasa Squad</h1>
 
                             </div>
 
                             <div className='text-black dark:text-[#DADDE2] font-satoshi italic text-3xl'>
                                 NASA Space Apps Challenge (October, 2023)
                             </div>
-                            <p className='text-black dark:text-[#DADDE2] mt-[65px] text-3xl'>
+                            <p className='text-black dark:text-[#DADDE2] mt-[40px] text-3xl'>
                                 Competed by using machine learning to train a model that extracts vital data from extensive space biology datasets, aiding in determining the impact of space travel on human bone health.
                             </p>
-                            <a className='mt-[100px] mx-auto ' href='https://github.com/Achen2804/NasaTime' target='blank'>
+                            <a className='mt-[40px] mx-auto ' href='https://github.com/Achen2804/NasaTime' target='blank'>
                                 <button className='pointer-events-auto dark:hover:shadow-darkMode-button hover:shadow-lightMode-button dark:bg-[#060B0B] bg-gray-300 dark:hover:bg-[#FAF8FF] button flex row items-center gap-3 font-satoshi text-[30px] dark:hover:text-black dark:text-[#DADDE2] text-black'>
                                     Learn More
 
@@ -276,18 +276,18 @@ function Projects() {
                         </div>
                         <div className="carousel-item h-full md:flex hidden flex-col dark:bg-black bg-[#F4F4F4]">
                             <div className=' w-full flex items-center justify-between'>
-                                <h1 className='w-[90%] h1-special font-satoshi text-[60px] dark:text-[#DADDE2] text-black'> Designathon</h1>
+                                <h1 className='w-[90%] h1-special font-satoshi text-6xl dark:text-[#DADDE2] text-black'> Designathon</h1>
 
                             </div>
 
                             <div className='text-black dark:text-[#DADDE2] font-satoshi italic text-3xl'>
 
                             </div>
-                            <p className='text-black dark:text-[#DADDE2] mt-[65px] text-3xl'>
+                            <p className='text-black dark:text-[#DADDE2] mt-[40px] text-3xl'>
                                 Challenged other designers by designing a non-motorized mechanical system to protect electrical
                                 connectors from debris in space using AutoDesk Inventor.
                             </p>
-                            <a className='mt-[100px] mx-auto ' href='https://drive.google.com/drive/folders/1yRbgQakXEV3RKcN3VuTO3bHrm6SJnn3d?usp=sharing' target='blank'>
+                            <a className='mt-[40px] mx-auto ' href='https://drive.google.com/drive/folders/1yRbgQakXEV3RKcN3VuTO3bHrm6SJnn3d?usp=sharing' target='blank'>
                                 <button className='pointer-events-auto dark:hover:shadow-darkMode-button hover:shadow-lightMode-button dark:bg-[#060B0B] bg-gray-300 dark:hover:bg-[#FAF8FF] button flex row items-center gap-3 font-satoshi text-[30px] dark:hover:text-black dark:text-[#DADDE2] text-black'>
                                     Learn More
 
@@ -303,7 +303,7 @@ function Projects() {
 
                     <motion.div ref={carouselImageRef} initial="hidden"
                         animate={inView ? 'visible' : 'hidden'}
-                        variants={animationVariants2} className="md:relative absolute md:flex hidden translate-y-[-20%] h-[700px] md:w-[900px] w-0 md:justify-normal justify-center carousel md:carousel-vertical flex-row md:rounded-[50px] md:mr-[20px] lg:mr-[100px]">
+                        variants={animationVariants2} className="md:relative absolute md:flex hidden translate-y-[-20%] h-[600px] md:w-[900px] w-0 md:justify-normal justify-center carousel md:carousel-vertical flex-row md:rounded-[50px] md:mr-[20px] lg:mr-[100px]">
                         <div className="carousel-item md:block hidden h-full">
                             <img loading="lazy" className='w-full  h-full object-cover' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/carousel-one.jpg?raw=true" />
                             <div className="absolute left-[10%] top-[0%] scale-[200%] mouse_scroll mx-auto block w-[24px] lg:mt-[100px] mt-[50px]">

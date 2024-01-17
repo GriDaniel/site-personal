@@ -358,3 +358,7 @@ html {
 .h1-special {
   word-wrap: break-word;
 }
+
+html {
+  scroll-padding-top: 100px;  
+}

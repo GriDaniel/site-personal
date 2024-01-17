@@ -47,7 +47,7 @@ const About = ({ darkMode }) => {
                 points: 3.00,
                 maxDistance: 18.00,
                 spacing: 20.00,
-                showDots:true
+                showDots: true
             });
         }
 
@@ -58,15 +58,18 @@ const About = ({ darkMode }) => {
         };
     }, [inView, darkMode]);
     return (
-        <div id="about" ref={ref2} className='md:pb-[30px] min-w-screen overflow-x-hidden overflow-hidden flex justify-center dark:bg-black bg-[#F4F4F4]'>
-            <div id="mega" ref={ref} className='max:w-[1920px] w-screen md:h-[900px] min-h-[900px] dark:bg-black bg-[#F4F4F4] flex items-center justify-center md:flex-row flex-col'>
+        <div ref={ref2} className='md:pb-0 pb-[100px] min-w-screen overflow-x-hidden overflow-hidden flex justify-center dark:bg-black bg-[#F4F4F4]'>
+            <div id="about" className='h-[10px] w-[20px] md:mt-[265px] mt-[100px]'>
+
+            </div>
+            <div id="mega" ref={ref} className='max:w-[1920px] w-screen md:h-[900px] min-h-auto dark:bg-black bg-[#F4F4F4] flex items-center justify-center md:flex-row flex-col'>
 
                 <motion.div
-                    
+
                     initial="hidden"
                     animate={inView ? 'visible' : 'hidden'}
                     variants={animationVariants}
-                    className='h-[200px] md:w-[60%]  md:h-[500px] w-[80%] mt-[100px] flex-col flex md:justify-start md:items-start justify-end'
+                    className='min-h-[50px] md:w-[60%] md:h-[500px] w-[80%] md:mt-[150px] mt-[100px] flex-col flex justify-start md:items-start'
                 >
                     <h1 className='dark:text-[#DADDE2] text-black md:ml-[20px] lg:ml-[100px] sm:text-8xl text-7xl font-satoshi font-bold'>About Me</h1>
                 </motion.div>
@@ -81,12 +84,10 @@ const About = ({ darkMode }) => {
                     initial="hidden"
                     animate={inView ? 'visible' : 'hidden'}
                     variants={animationVariants2}
-                    className='h-full w-[80%]  flex flex-col items-center justify-center'
+                    className='min-h-auto w-[80%] flex flex-col items-center md:justify-center justify-start'
                 >
-                    <div className='md:h-[250px] h-0 md:block hidden w-full '>
 
-                    </div>
-                    <div className=' py-5 px-5 min-h-[500px] relative w-full md:mt-0  mt-[50px] flex flex-col justify-between'>
+                    <div className='md:mt-[150px] md:px-5 px-0 min-h-[500px] relative w-full mt-[40px] flex flex-col justify-center items-center'>
                         <p className='dark:text-[#DADDE2] text-black dark:bg-black bg-[#F4F4F4]  mb-auto lg:mr-[100px] md:mr-[50px] font-satoshi text-3xl'>
                             I am driven by innovation, aiming to merge computer engineering and web design to develop impactful projects. My focus lies in creating initiatives that address societal needs by harnessing technology for substantive and meaningful change. I am currently dedicated to building a platform or system aimed at simplifying the learning process for <br></br><div className='inline'><span className='font-extrabold relative '>
                                 <TypeAnimation
@@ -103,33 +104,33 @@ const About = ({ darkMode }) => {
                                     wrapper="span"
                                     speed={45}
                                     repeat={Infinity}
-                                    
+
 
                                 />
                             </span>
                             </div>
                         </p>
-                        <div className='h-[300px] w-full flex md:mb-[100px] mb-0 mt-[100px] items-start md:flex-row flex-col md:gap-0 gap-[50px]'>
-                            <p className='dark:text-[#DADDE2] text-black mt-auto mr-auto font-satoshi text-5xl font-bold italic'>
+                        <div className='min-h-auto w-full flex md:mt-[100px] mt-[40px] items-start md:flex-row flex-col md:gap-0 gap-[20px]'>
+                            <p className='dark:text-[#DADDE2] text-black md:mt-0 mt-auto mr-auto font-satoshi text-4xl font-bold italic'>
                                 Passion is Key.
                             </p>
-                            <div className='h-[100px] w-[300px] flex md:flex-row md:justify-end mb-auto items-end mr-[50px] lg:mr-[100px]'>
+                            <div className='h-[60px] w-[300px] flex md:flex-row md:justify-end md:mb-auto mb-0 items-end mr-[50px] lg:mr-[100px]'>
                                 <a href='https://www.linkedin.com/in/dangoliveira/' target='blank' className='mr-[40px] dark:block hidden'>
-                                    <img id="myImage" className='hover:scale-105 sm:w-[100px] sm:h-[100px] w-[70px] h-[70px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/linked-light.png?raw=true"  />
+                                    <img id="myImage" className='hover:scale-105 md:w-[100px] md:h-[100px] w-[60px] h-[60px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/linked-light.png?raw=true" />
                                 </a>
                                 <a href='https://www.linkedin.com/in/dangoliveira/' target='blank' className='mr-[40px] dark:hidden dark'>
-                                    <img id="myImage" className='hover:scale-105 sm:w-[100px] sm:h-[100px] w-[70px] h-[70px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/linked-dark.png?raw=true.png" />
+                                    <img id="myImage" className='hover:scale-105 md:w-[100px] md:h-[100px] w-[60px] h-[60px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/linked-dark.png?raw=true.png" />
                                 </a>
                                 <a href='https://github.com/GriDaniel' target='blank' className='dark:block hidden'>
-                                    <img className='hover:scale-105 sm:w-[100px] sm:h-[100px] w-[70px] h-[70px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/git-light.png?raw=true" alt="" />
+                                    <img className='hover:scale-105 md:w-[100px] md:h-[100px] w-[60px] h-[60px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/git-light.png?raw=true" alt="" />
                                 </a>
                                 <a href='https://github.com/GriDaniel' target='blank' className='dark:hidden block'>
-                                    <img className='hover:scale-105 rounded-full sm:w-[100px] sm:h-[100px] w-[70px] h-[70px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/git-dark.png?raw=true" alt="" />
+                                    <img className='hover:scale-105 rounded-full md:w-[100px] md:h-[100px] w-[60px] h-[60px]' src="https://github.com/GriDaniel/site-personal/blob/main/public/images/git-dark.png?raw=true" alt="" />
                                 </a>
                             </div>
                         </div>
                     </div>
-                   
+
                 </motion.div>
 
 
