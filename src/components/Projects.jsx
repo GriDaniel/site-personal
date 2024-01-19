@@ -174,7 +174,7 @@ function Projects() {
                                 <p className='w-[80%] text-black dark:text-[#DADDE2] mt-[40px] text-3xl'>
                                     1st place winners, devising programming solutions to enhance the features and preformance of autonomous vehicles.
                                 </p>
-                                <a className='mt-[40px] mx-auto ' href='https://github.com/Swwwerve/NovusCar' target='blank'>
+                                <a className='mt-[40px] mx-auto ' href='https://github.com/GriDaniel/Novus-Car-Parking-Simulator' target='blank'>
                                     <button className='pointer-events-auto dark:hover:shadow-darkMode-button hover:shadow-lightMode-button dark:bg-[#060B0B] bg-gray-300 dark:hover:bg-[#FAF8FF] button flex row items-center gap-3 font-satoshi text-[30px] dark:hover:text-black dark:text-[#DADDE2] text-black'>
                                         Learn More
 
@@ -244,7 +244,7 @@ function Projects() {
                             <p className='text-black dark:text-[#DADDE2] mt-[40px] text-3xl'>
                                 1st place winners, devising programming solutions to enhance the features and preformance of autonomous vehicles.
                             </p>
-                            <a className='mt-[40px] h-full mx-auto ' href='https://github.com/Swwwerve/NovusCar' target='blank'>
+                            <a className='mt-[40px] h-full mx-auto ' href='https://github.com/GriDaniel/Novus-Car-Parking-Simulator' target='blank'>
                                 <button className='pointer-events-auto dark:hover:shadow-darkMode-button hover:shadow-lightMode-button dark:bg-[#060B0B] bg-gray-300 dark:hover:bg-[#FAF8FF] button flex row items-center gap-3 font-satoshi text-[30px] dark:hover:text-black dark:text-[#DADDE2] text-black'>
                                     Learn More
 
